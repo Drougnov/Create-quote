@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Create quote</title>
+
+  <link rel="stylesheet" id="google-fonts-css" href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600%3B700%3B800%3B900&amp;display=swap&amp;ver=6.4.3" media="all">
+    
+    <!-- popup-stylesheet & script -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/popup.css">
+    <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/popup.js"></script>
+    
+    <link rel="stylesheet" id="hello-elementor-child-style-css" href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3" media="all">
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <link rel="stylesheet" id="tachyons-stylesheet-css" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/customTachyonsStylesheet.css?ver=6.4.2" media="all">
+    <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/main.js?ver=1.0" id="main-js"></script>
+
+    <!-- jquery select-2 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+    <script defer>
+      $(document).ready(function() {
+          $('.js-example-basic-single').select2();
+      });
+    </script>
+    <style>
+      /* Radio Button Height */
+      .elm_DbnGUE {
+          height: 6.25rem;
+      }
+
+      /* Border Color */
+      .elm_OVYhdl {
+          border-color: #DEE5EC;
+      }
+
+      .elm_EThNYL {
+          gap: 0.5rem
+      }
+
+      .elm_NnUnNh:checked+label {
+          background: rgba(51, 0, 255, 0.1);
+          border: 0.094rem solid #3300ff;
+      }
+      .elm_NnUnNh:checked+label .elm_UoQUcF{
+          display: none;
+      }
+      .elm_NnUnNh:checked+label .elm_aoozIp{
+          display: block;
+      }
+    </style>
+  </head>
+  <body>
+      <div class="step-container" data-attribute-steps-handler="1" data-steps='[
+      {"name": "createQuote"},
+      {"name": "customerType"},
+      {"name": "select-create-customer"},
+      {"name": "hourlyRate"},
+      {"name": "stepCheckboxes"},
+      {"name": "stepSelection"},
+      {"name": "hourlyRate"}
+      ]'>
+      <div data-attribute-steps-wrapper="1" data-current-step="createQuote">
+          <!-- Step Loading -->
+          <div data-step-name="createQuote" class="pa3">
+          <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
+              <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Create Quotes</h2>
+              <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
+                  <span class="f18 fw5 lh-24 white">Create Quotes</span>
+              </button>
+          </form>
+          </div>
+
+          <!-- Customer Type -->
+          <div data-step-name="customerType" style="display: none;" class="pa3">
+          <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
+            <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Customer Type</h2>
+            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
+            
+            <div class="flex flex-column gap16 mt3" data-radio-container>
+              <div class="relative db">
+                  <input type="radio" name="customer" value="select a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" checked data-radio-input="select-customer">
+                  <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                      <div class="w24 h24 flex justify-center items-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                          <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                        </svg>
+                      </div>
+                      <div class="flex flex-column elm_EThNYL">
+                          <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Select a customer</h4>
+                          <h5 class="eml_vhcv poppins f5 fw4 fs-noraml lh-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, eius.</h5>
+                      </div>
+                  </label>
+              </div>
+
+              <div class="relative db">
+                  <input type="radio" name="customer" value="create a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-radio-input="create-customer">
+                  <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                    <div class="w24 h24 flex justify-center items-center relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                        <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                      </svg>
+                    </div>
+                    <div class="flex flex-column elm_EThNYL">
+                          <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Create a customer</h4>
+                          <h5 class="eml_vhcv poppins f5 fw4 fs-noraml lh-24">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, delectus?</h5>
+                      </div>
+                  </label>
+              </div>
+            </div>
+
+            <div class="flex gap16 mt3">
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
+                  <span class="f18 fw5 lh-24 white">Next</span>
+              </button>
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink"  data-attribute-back-step-button="1">
+                  <span class="f18 fw5 lh-24 white">Back</span>
+              </button>
+            </div>
+          </form>
+          </div>
+
+          <!-- select/create customer -->
+          <div data-step-name="select-create-customer" style="display: none;" class="pa3">
+          <form onsubmit="event.preventDefault()">
+            <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Select/Create Customer</h2>
+            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
+            
+            <div class="mt3" data-content-container>
+              <!-- select-a-customer -->
+              <div class="flex flex-column" data-radio-content="select-customer">
+                <label for="customer" class="db mb2">Select a customer:</label>
+                <select class="js-example-basic-single" name="customer">
+                  <option value="customer-1">Customer 1</option>
+                  <option value="customer-2">Customer 2</option>
+                  <option value="customer-3">Customer 3</option>
+                  <option value="customer-4">Customer 4</option>
+                </select>
+
+                <div class="flex flex-column mt3">
+                  <div class="relative db">
+                      <input type="radio" name="address" value="address-1" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                      <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                          <div class="w24 h24 flex justify-center items-center relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                              <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                            </svg>
+                          </div>
+                          <div class="flex flex-column elm_EThNYL">
+                              <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 1</h4>
+                          </div>
+                      </label>
+                  </div>
+    
+                  <div class="relative db">
+                      <input type="radio" name="address" value="address-2" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                      <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                        <div class="w24 h24 flex justify-center items-center relative">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                            <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                          </svg>
+                        </div>
+                        <div class="flex flex-column elm_EThNYL">
+                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 2</h4>
+                        </div>
+                      </label>
+                  </div>
+
+                  <div class="relative db">
+                    <input type="radio" name="address" value="address-3" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                    <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                      <div class="w24 h24 flex justify-center items-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                          <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                        </svg>
+                      </div>
+                      <div class="flex flex-column elm_EThNYL">
+                          <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 3</h4>
+                      </div>
+                    </label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- create-a-customer -->
+              <div class="flex-column gap8 dn" data-radio-content="create-customer">
+                  <!-- input-field -->
+                  <div class="flex flex-column gap8">
+                      <label class="f6 fw5 lh-24 custom-text-secondary-color" for="customer-name">Customer Name</label>
+                      <input id="customer-name" class="common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color" placeholder="Enter customer name">
+                  </div>
+
+                  <div class="container">
+                    <div class="flex items-center gap16 input-group">
+                      <input type="text" placeholder="Enter address" class="address-input common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color flex-max">
+                    </div>
+                    <button class="flex justify-center items-center gap10 h36 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="pink">
+                        <span class="f5 fw5 lh-24 white">Add Another</span>
+                    </button>
+                  </div>
+
+                  <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="pink">
+                      <span class="f18 fw5 lh-24 white">Save Customer</span>
+                  </button>
+
+                  <div class="flex flex-column mt3">
+                    <div class="relative db">
+                        <input type="radio" name="address" value="address-1" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                        <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                            <div class="w24 h24 flex justify-center items-center relative">
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                              </svg>
+                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                                <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                              </svg>
+                            </div>
+                            <div class="flex flex-column elm_EThNYL">
+                                <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 1</h4>
+                            </div>
+                        </label>
+                    </div>
+      
+                    <div class="relative db">
+                        <input type="radio" name="address" value="address-2" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                        <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                          <div class="w24 h24 flex justify-center items-center relative">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                              <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                            </svg>
+                          </div>
+                          <div class="flex flex-column elm_EThNYL">
+                              <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 2</h4>
+                          </div>
+                        </label>
+                    </div>
+  
+                    <div class="relative db">
+                      <input type="radio" name="address" value="address-3" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                      <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                        <div class="w24 h24 flex justify-center items-center relative">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                            <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                          </svg>
+                        </div>
+                        <div class="flex flex-column elm_EThNYL">
+                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 3</h4>
+                        </div>
+                      </label>
+                    </div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="flex gap16">
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
+                  <span class="f18 fw5 lh-24 white">Next</span>
+              </button>
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink"  data-attribute-back-step-button="1">
+                  <span class="f18 fw5 lh-24 white">Back</span>
+              </button>
+              </div>
+          </form>
+          </div>
+
+          <!-- hourly rate -->
+          <div data-step-name="hourlyRate" style="display: none;" class="pa3">
+          <form onsubmit="event.preventDefault()">
+            <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Hourly Rate</h2>
+            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
+            
+            <!-- input-field -->
+            <div class="flex flex-column gap8 mt3">
+                <label class="f6 fw5 lh-24 custom-text-secondary-color" for="hourly-rate">Hourly Rate</label>
+                <input id="hourly-rate" class="common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color" placeholder="Enter hourly rate">
+            </div>
+
+            <div class="flex gap16">
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-complete-submission-button="1">
+                  <span class="f18 fw5 lh-24 white">Proceed</span>
+              </button>
+              </div>
+          </form>
+          </div>
+      </div>
+      </div>
+  </body>
+</html>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    function showStep(stepContainer, stepName) {
+      const steps = stepContainer.querySelectorAll('[data-step-name]');
+      steps.forEach(step => {
+        step.style.display = step.getAttribute('data-step-name') === stepName ? 'block' : 'none';
+      });
+      stepContainer.setAttribute('data-current-step', stepName);
+      updateButtonsVisibility(stepContainer);
+      // updateProgressBar(stepContainer);
+    }
+    
+    function updateProgressBar(stepContainer) {
+      const steps = stepContainer.querySelectorAll('[data-step-name]');
+      const currentStepName = stepContainer.getAttribute('data-current-step');
+      const stepIndex = Array.from(steps).findIndex(step => step.getAttribute('data-step-name') === currentStepName) + 1;
+      const totalSteps = steps.length;
+      const progressBar = stepContainer.querySelector('.progress-bar');
+      progressBar.textContent = `Step ${stepIndex}/${totalSteps}`;
+    }
+
+    function validateFieldsBeforeStepJump(stepContainer, nextStepName = null) {
+      const currentStepName = stepContainer.getAttribute('data-current-step');
+      const currentStep = stepContainer.querySelector(`[data-step-name="${currentStepName}"]`);
+      const requiredElements = currentStep.querySelectorAll('[data-attribute-steps-required="1"]');
+      let isValid = true;
+  
+      requiredElements.forEach(element => {
+        // Basic validation for empty fields
+        if (
+          (element.tagName === 'INPUT' && (element.type === 'text' || element.type === 'number') && !element.value.trim()) ||
+          (element.tagName === 'SELECT' && element.selectedIndex === 0) ||
+          (element.tagName === 'TEXTAREA' && !element.value.trim()) ||
+          (element.type === 'checkbox' && element.checked === false && element.getAttribute('data-attribute-steps-required') === "1")
+        ) {
+          alert(`Please fill in all required fields in ${currentStepName}`);
+          isValid = false;
+          return;
+        }
+        // Validation for number input with min and max values
+        if (element.tagName === 'INPUT' && element.type === 'number') {
+          const min = parseInt(element.getAttribute('data-attribute-steps-min-amount'));
+          const max = parseInt(element.getAttribute('data-attribute-steps-max-amount'));
+          const value = parseInt(element.value.trim());
+          if (isNaN(value) || value < min || value > max) {
+            element.setCustomValidity(`Please enter a valid age between ${min} and ${max}`);
+            isValid = false;
+            return;
+          } else {
+            element.setCustomValidity('');
+          }
+        }
+      });
+  
+      if (isValid && nextStepName) {
+        showStep(stepContainer, nextStepName);
+      } else if (isValid) {
+        nextStep(stepContainer);
+      }
+      
+      return isValid; // Return the validation result
+    }
+
+    function nextStep(stepContainer) {
+      const currentStepName = stepContainer.getAttribute('data-current-step');
+      const stepsData = JSON.parse(stepContainer.getAttribute('data-steps'));
+      const currentStepIndex = stepsData.findIndex(step => step.name === currentStepName);
+      if (currentStepIndex < stepsData.length - 1) {
+        const nextStepName = stepsData[currentStepIndex + 1].name;
+        showStep(stepContainer, nextStepName);
+      }
+    }
+
+    function completeStep(stepContainer) {
+      // Run validation before completing the step
+      const isValid = validateFieldsBeforeStepJump(stepContainer, null);
+      if (isValid) {
+        const currentStepName = stepContainer.getAttribute('data-current-step');
+        if (currentStepName === 'hourlyRate') {
+          alert('Create new quote form!');
+        }
+      }
+    }
+
+    function updateButtonsVisibility(stepContainer) {
+      const currentStepName = stepContainer.getAttribute('data-current-step');
+      const stepsData = JSON.parse(stepContainer.getAttribute('data-steps'));
+      const currentStepIndex = stepsData.findIndex(step => step.name === currentStepName);
+      const previousBtn = stepContainer.querySelector('[data-attribute-back-step-button="1"]');
+      const nextBtn = stepContainer.querySelector('[data-attribute-next-step-button="1"]');
+      const completeBtn = stepContainer.querySelector('[data-attribute-complete-submission-button="1"]');
+
+      if (previousBtn) {
+        previousBtn.style.display = currentStepIndex === 0 ? 'none' : 'block';
+      }
+      if (nextBtn) {
+        nextBtn.style.display = currentStepIndex === stepsData.length - 1 ? 'none' : 'block';
+      }
+      // if (completeBtn) {
+      //   completeBtn.style.display = currentStepIndex === stepsData.length - 1 ? 'block' : 'none';
+      // }
+    }
+
+    const stepContainers = document.querySelectorAll('.step-container');
+    stepContainers.forEach(stepContainer => {
+      const nextButtons = stepContainer.querySelectorAll('[data-attribute-next-step-button="1"]');
+      nextButtons.forEach(btn => {
+        btn.addEventListener('click', () => validateFieldsBeforeStepJump(stepContainer));
+      });
+      
+      const backButtons = stepContainer.querySelectorAll('[data-attribute-back-step-button="1"]');
+      backButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const currentStepName = stepContainer.getAttribute('data-current-step');
+          const stepsData = JSON.parse(stepContainer.getAttribute('data-steps'));
+          const currentStepIndex = stepsData.findIndex(step => step.name === currentStepName);
+          if (currentStepIndex > 0) {
+            const previousStepName = stepsData[currentStepIndex - 1].name;
+            showStep(stepContainer, previousStepName);
+          }
+        });
+      });
+
+      const completeButton = stepContainer.querySelector('[data-attribute-complete-submission-button="1"]');
+      if (completeButton) {
+        completeButton.addEventListener('click', () => completeStep(stepContainer));
+      }
+
+      const forceStepButton = stepContainer.querySelector('[data-attribute-forsce-to-step]');
+        if(forceStepButton){
+          forceStepButton.addEventListener('click', () => {
+          const stepName = forceStepButton.getAttribute('data-attribute-forsce-to-step');
+          showStep(stepContainer, stepName); // This now only shows the step without validation.
+        });
+      }
+
+      // Initialize the first step
+      showStep(stepContainer, 'createQuote');
+    });
+
+    const radioContainer = document.querySelector("[data-radio-container]");
+    const contentContainer = document.querySelector("[data-content-container]");
+    const radios = radioContainer.querySelectorAll("[data-radio-input]");
+
+    radios.forEach(function(radio) {
+      radio.addEventListener("change", function() {
+        const targetDivId = this.dataset.radioInput;
+        const targetDiv = contentContainer.querySelector("[data-radio-content='" + targetDivId + "']");
+        const otherDivs = contentContainer.querySelectorAll("[data-radio-content]:not([data-radio-content='" + targetDivId + "'])");
+        
+        if (targetDiv) {
+          targetDiv.style.display = "flex";
+        }
+
+        otherDivs.forEach(function(div) {
+          div.style.display = "none";
+        });
+      });
+    });
+  });
+</script>
