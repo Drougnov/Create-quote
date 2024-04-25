@@ -18,6 +18,17 @@
 
 
     <style>
+        .elm_qJBugX{
+            width: 50rem;
+        }
+
+        /* comment header avatar */
+        .common_elm_gowFuM{
+            width: 2.75rem;
+            height: 2.75rem;
+            min-width: 2.75rem;
+        }
+
         /* comment-header-online-dot */
         .common_elm_uuDLAG{
             bottom: -.5rem;
@@ -64,7 +75,7 @@
         <!-- inner wrapper -->
         <div class="elm_yNwqwJ top-0 w-100 flex items-center justify-center absolute">
             <!-- container -->
-            <div class="elm_qJBugX inline-flex flex-column gap24 w960 p24 br30 relative bg-white">
+            <div class="elm_qJBugX inline-flex flex-column gap24 p24 br30 relative bg-white">
                 <!-- header -->
                 <div class="elm_nZyPEx flex gap10">
                     <h1 class="f3 fw7 lh-24 custom-text-primary-color flex-max mt0 mb0">Private Notes</h1>
@@ -83,13 +94,13 @@
                         <!-- comments -->
                         <div class="flex flex-column gap8">
                             <!-- comment-header -->
-                            <div class="flex justify-between items-center w-100">
+                            <div class="flex justify-between items-start w-100">
                                 <!-- comment-header__left -->
-                                <div class="flex items-center gap8 w-100 self-stretch">
+                                <div class="flex items-center gap10 w-100 self-stretch">
                                     <!-- avatar-container -->
-                                    <div class="common_elm_gowFuM db bg-center cover br-100 relative z-0" data-is-online="1" and="" data-is-online-id="" style="background-image: url('https://d3d9qpagvotra1.cloudfront.net/1/images/2023_08_08_154725/2023_08_08_154725-300-min.jpg');">
+                                    <div class="common_elm_gowFuM db bg-center cover br-100 relative z-0 w48 h48" data-is-online="0" and="" data-is-online-id="" style="background-image: url('https://d3d9qpagvotra1.cloudfront.net/1/images/2023_08_08_154725/2023_08_08_154725-300-min.jpg');">
                                         <!-- online-dot -->
-                                        <div class="common_elm_uuDLAG common_elm_fXEhQq absolute">
+                                        <div class="common_elm_uuDLAG common_elm_fXEhQq absolute dn">
                                             <svg class="common_elm_JQXjfi w24 h24" data-icon="livestream_dot" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <circle cx="12" cy="12" r="5" fill="white"></circle>
                                             </svg>
@@ -98,15 +109,15 @@
                         
                                     <!-- profile-info-container -->
                                     <div class="flex flex-column flex-max">
-                                        <h4 class="f18 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Name</h4>
-                                        <span class="f6 fw5 lh-24 custom-text-secondary-coloro-70 custom-text-secondary-color tracked-tight-p00875">@username</span>
+                                        <h4 class="f5 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Jamie Linderman</h4>
+                                        <span class="f6 fw5 lh-24 custom-text-secondary-coloro-70 custom-text-secondary-color tracked-tight-p00875">27 minutes ago</span>
                                     </div>
                                 </div>
                         
                                 <!-- comment-header__right -->
-                                <div class="target-id" style="--target-half-width: 10px;">
+                                <div class="target-id">
                                     <div class="pointer target-id-button" data-target="menu-feed-216">
-                                        <svg class="common_elm_GRbGNf w20 h20" data-icon="more" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <svg class="common_elm_SKjJTT w24 h24 rotate-90" data-icon="more" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path d="M13.9531 6.64502C13.9531 7.68055 13.0787 8.52002 12 8.52002C10.9213 8.52002 10.0469 7.68055 10.0469 6.64502C10.0469 5.60949 10.9213 4.77002 12 4.77002C13.0787 4.77002 13.9531 5.60949 13.9531 6.64502Z" fill="#303437"></path>
                                             <path d="M13.9531 12.27C13.9531 13.3056 13.0787 14.145 12 14.145C10.9213 14.145 10.0469 13.3056 10.0469 12.27C10.0469 11.2345 10.9213 10.395 12 10.395C13.0787 10.395 13.9531 11.2345 13.9531 12.27Z" fill="#303437"></path>
                                             <path d="M12 19.77C13.0787 19.77 13.9531 18.9306 13.9531 17.895C13.9531 16.8595 13.0787 16.02 12 16.02C10.9213 16.02 10.0469 16.8595 10.0469 17.895C10.0469 18.9306 10.9213 19.77 12 19.77Z" fill="#303437"></path>
@@ -115,13 +126,29 @@
                                 </div>
                             </div>
 
-                            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores tempora assumenda odio, non corporis dolor odit animi culpa incidunt ullam debitis minima dignissimos aspernatur nulla!</p>
+                            <p class="f5 lh-24 mb3 custom-text-primary-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores tempora assumenda odio, non corporis dolor odit animi culpa incidunt ullam debitis minima dignissimos aspernatur nulla!</p>
                         
+                            <div class="flex justify-between items-center">
+                                <div class="flex items-center gap16">
+                                    <a href="#" class="poppins fw5 wb f5 lh-24 ttu underline custom-text-secondary-color">Reply</a>
+                                    <div class="w16 h16 pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w16 h16">
+                                            <path d="M16.5 9C16.5 8.44772 16.0523 8 15.5 8C14.9477 8 14.5 8.44772 14.5 9V9.5C14.5 10.0523 14.9477 10.5 15.5 10.5C16.0523 10.5 16.5 10.0523 16.5 9.5V9Z" fill="#303437"/>
+                                            <path d="M8.5 8C9.05229 8 9.5 8.44772 9.5 9V9.5C9.5 10.0523 9.05229 10.5 8.5 10.5C7.94772 10.5 7.5 10.0523 7.5 9.5V9C7.5 8.44772 7.94772 8 8.5 8Z" fill="#303437"/>
+                                            <path d="M8.05276 14.6055C8.54407 14.3599 9.14093 14.5566 9.39037 15.0448L9.39111 15.0462C9.3936 15.0507 9.39965 15.0617 9.40936 15.0782C9.42886 15.1113 9.46263 15.1657 9.51131 15.2345C9.60946 15.373 9.76328 15.5627 9.97684 15.7526C10.3955 16.1248 11.0428 16.5 12 16.5C12.9572 16.5 13.6044 16.1248 14.0231 15.7526C14.2367 15.5627 14.3905 15.373 14.4886 15.2345C14.5373 15.1657 14.5711 15.1113 14.5906 15.0782C14.5974 15.0666 14.6024 15.0578 14.6057 15.0519L14.6064 15.0511C14.6075 15.049 14.6082 15.0474 14.6088 15.0462L14.6096 15.0448C14.859 14.5566 15.4559 14.3599 15.9472 14.6055C16.4412 14.8525 16.6414 15.4532 16.3944 15.9472L15.5 15.5C16.3944 15.9472 16.3942 15.9476 16.394 15.9481L16.3925 15.9511L16.3901 15.9557L16.3842 15.9672C16.3797 15.9758 16.3741 15.9864 16.3674 15.9987C16.354 16.0234 16.3362 16.0554 16.3137 16.0936C16.2687 16.1699 16.2048 16.2717 16.1207 16.3905C15.9532 16.6269 15.7008 16.9372 15.3518 17.2474C14.6455 17.8752 13.5428 18.5 12 18.5C10.4572 18.5 9.3544 17.8752 8.64811 17.2474C8.29917 16.9372 8.04675 16.6269 7.87926 16.3905C7.79514 16.2717 7.73124 16.1699 7.68629 16.0936C7.66378 16.0554 7.64591 16.0234 7.63252 15.9987C7.62583 15.9864 7.62025 15.9758 7.61576 15.9672L7.60985 15.9557L7.6075 15.9511L7.60647 15.949L7.606 15.9481C7.60577 15.9476 7.60555 15.9472 8.49998 15.5L7.60555 15.9472C7.35856 15.4532 7.55878 14.8525 8.05276 14.6055Z" fill="#303437"/>
+                                            <path d="M14.6064 15.0511L9.39037 15.0448L14.6057 15.0519L14.6064 15.0511Z" fill="#303437"/>
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C5.92487 1 1 5.92487 1 12C1 18.0751 5.92487 23 12 23C18.0751 23 23 18.0751 23 12C23 5.92487 18.0751 1 12 1ZM3 12C3 7.02943 7.02943 3 12 3C16.9706 3 21 7.02943 21 12C21 16.9706 16.9706 21 12 21C7.02943 21 3 16.9706 3 12Z" fill="#303437"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                                <span class="poppins fw5 wb f6 lh-24 custom-text-secondary-color">#31</span>
+                            </div>
+
                             <div class="flex flex-column items-start gap8 w-100 bg-white relative">
-                                <textarea class="bg-100 pl15 pr15 br10 custom-pale-blue-border" rows="5" name="send" id="send" placeholder="Enter your comment"></textarea>
+                                <textarea class="bg-100 pl15 pr15 br10 custom-pale-blue-border custom-light-sky-blue-bg-color" rows="5" name="send" id="send" placeholder="Enter your comment"></textarea>
                                 <!-- emoji-container -->
                                 <div class="elm_yjOTda absolute pointer">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="common_elm_FSMoIG w24 h24">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="w24 h24">
                                         <path d="M16.5 9C16.5 8.44772 16.0523 8 15.5 8C14.9477 8 14.5 8.44772 14.5 9V9.5C14.5 10.0523 14.9477 10.5 15.5 10.5C16.0523 10.5 16.5 10.0523 16.5 9.5V9Z" fill="#303437"/>
                                         <path d="M8.5 8C9.05229 8 9.5 8.44772 9.5 9V9.5C9.5 10.0523 9.05229 10.5 8.5 10.5C7.94772 10.5 7.5 10.0523 7.5 9.5V9C7.5 8.44772 7.94772 8 8.5 8Z" fill="#303437"/>
                                         <path d="M8.05276 14.6055C8.54407 14.3599 9.14093 14.5566 9.39037 15.0448L9.39111 15.0462C9.3936 15.0507 9.39965 15.0617 9.40936 15.0782C9.42886 15.1113 9.46263 15.1657 9.51131 15.2345C9.60946 15.373 9.76328 15.5627 9.97684 15.7526C10.3955 16.1248 11.0428 16.5 12 16.5C12.9572 16.5 13.6044 16.1248 14.0231 15.7526C14.2367 15.5627 14.3905 15.373 14.4886 15.2345C14.5373 15.1657 14.5711 15.1113 14.5906 15.0782C14.5974 15.0666 14.6024 15.0578 14.6057 15.0519L14.6064 15.0511C14.6075 15.049 14.6082 15.0474 14.6088 15.0462L14.6096 15.0448C14.859 14.5566 15.4559 14.3599 15.9472 14.6055C16.4412 14.8525 16.6414 15.4532 16.3944 15.9472L15.5 15.5C16.3944 15.9472 16.3942 15.9476 16.394 15.9481L16.3925 15.9511L16.3901 15.9557L16.3842 15.9672C16.3797 15.9758 16.3741 15.9864 16.3674 15.9987C16.354 16.0234 16.3362 16.0554 16.3137 16.0936C16.2687 16.1699 16.2048 16.2717 16.1207 16.3905C15.9532 16.6269 15.7008 16.9372 15.3518 17.2474C14.6455 17.8752 13.5428 18.5 12 18.5C10.4572 18.5 9.3544 17.8752 8.64811 17.2474C8.29917 16.9372 8.04675 16.6269 7.87926 16.3905C7.79514 16.2717 7.73124 16.1699 7.68629 16.0936C7.66378 16.0554 7.64591 16.0234 7.63252 15.9987C7.62583 15.9864 7.62025 15.9758 7.61576 15.9672L7.60985 15.9557L7.6075 15.9511L7.60647 15.949L7.606 15.9481C7.60577 15.9476 7.60555 15.9472 8.49998 15.5L7.60555 15.9472C7.35856 15.4532 7.55878 14.8525 8.05276 14.6055Z" fill="#303437"/>
@@ -130,7 +157,7 @@
                                     </svg>
                                 </div>
                                 <!-- send-button -->
-                                <button type="button" class="elm_PONWKa absolute right-1 bottom-1 caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointer h36 pa8 size-medium" data-button-type="blue-1">
+                                <button type="button" class="elm_PONWKa absolute right-1 bottom-1 caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointer h36 size-medium" data-button-type="blue">
                                     <span class="poppins fw5 wb f6 lh-24">Send</span>
                                 </button>		
                             </div>
