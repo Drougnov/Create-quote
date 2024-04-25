@@ -50,6 +50,41 @@
       .elm_NnUnNh:checked+label .elm_aoozIp{
           display: block;
       }
+
+      .select2-container{
+        max-width: 30rem;
+        min-height: 2.5rem;
+        max-height: 15.625rem;
+      }
+
+      .select2-container--default .select2-selection--single{
+        height: 100%;
+        margin-top: 0;
+        border-radius: 0.625rem;
+        border: 1px solid #dee5ec;
+        padding: 0.75rem 0.625rem;
+      }
+
+      .select2-container--default .select2-selection--single .select2-selection__arrow{
+        top: 14px;
+        right: 12px;
+      }
+
+      /* progress-bar */
+      .elm_wPYnYc{
+        height: .5rem;
+        border-radius: 1.5rem;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      .elm_jwemmN{
+        transition: all .2s ease-in;
+      }
+
+      .elm_wwGmbu:disabled{
+        opacity: .5;
+        cursor: not-allowed;
+      }
     </style>
   </head>
   <body>
@@ -57,9 +92,7 @@
       {"name": "createQuote"},
       {"name": "customerType"},
       {"name": "select-create-customer"},
-      {"name": "hourlyRate"},
-      {"name": "stepCheckboxes"},
-      {"name": "stepSelection"},
+      {"name": "select-address"},
       {"name": "hourlyRate"}
       ]'>
       <div data-attribute-steps-wrapper="1" data-current-step="createQuote">
@@ -68,21 +101,18 @@
           <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
               <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Create Quotes</h2>
               <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="blue" data-attribute-next-step-button="1">
                   <span class="f18 fw5 lh-24 white">Create Quotes</span>
               </button>
           </form>
           </div>
 
-          <!-- Customer Type -->
+          <!-- Selection -->
           <div data-step-name="customerType" style="display: none;" class="pa3">
           <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
-            <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Customer Type</h2>
-            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
-            
             <div class="flex flex-column gap16 mt3" data-radio-container>
               <div class="relative db">
-                  <input type="radio" name="customer" value="select a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" checked data-radio-input="select-customer">
+                  <input type="radio" name="customer" value="select a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-radio-input="select-customer" data-attribute-next-step-button="1">
                   <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
                       <div class="w24 h24 flex justify-center items-center relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
@@ -101,7 +131,7 @@
               </div>
 
               <div class="relative db">
-                  <input type="radio" name="customer" value="create a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-radio-input="create-customer">
+                  <input type="radio" name="customer" value="create a customer" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-radio-input="create-customer" data-attribute-next-step-button="1">
                   <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
                     <div class="w24 h24 flex justify-center items-center relative">
                       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
@@ -119,38 +149,68 @@
                   </label>
               </div>
             </div>
-
-            <div class="flex gap16 mt3">
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
-                  <span class="f18 fw5 lh-24 white">Next</span>
-              </button>
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink"  data-attribute-back-step-button="1">
-                  <span class="f18 fw5 lh-24 white">Back</span>
-              </button>
-            </div>
           </form>
           </div>
 
           <!-- select/create customer -->
           <div data-step-name="select-create-customer" style="display: none;" class="pa3">
           <form onsubmit="event.preventDefault()">
-            <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Select/Create Customer</h2>
-            <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
-            
             <div class="mt3" data-content-container>
               <!-- select-a-customer -->
               <div class="flex flex-column" data-radio-content="select-customer">
+                <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Select Customer</h2>
+                <p class="f5 lh-24 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
                 <label for="customer" class="db mb2">Select a customer:</label>
-                <select class="js-example-basic-single" name="customer">
+                <select class="js-example-basic-single w-20" name="customer">
                   <option value="customer-1">Customer 1</option>
                   <option value="customer-2">Customer 2</option>
                   <option value="customer-3">Customer 3</option>
                   <option value="customer-4">Customer 4</option>
                 </select>
+              </div>
 
+              <!-- create-a-customer -->
+              <div class="flex-column gap8 dn" data-radio-content="create-customer">
+                <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Create Customer</h2>
+                <p class="f5 lh-24 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
+                <!-- input-field -->
+                <div class="flex flex-column gap8">
+                    <label class="f6 fw5 lh-24 custom-text-secondary-color" for="customer-first-name">First Name</label>
+                    <input id="customer-first-name" class="common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color" placeholder="Enter customer firstname">
+                </div>
+                <!-- input-field -->
+                <div class="flex flex-column gap8">
+                  <label class="f6 fw5 lh-24 custom-text-secondary-color" for="customer-last-name">Last Name</label>
+                  <input id="customer-last-name" class="common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color" placeholder="Enter customer lastname">
+                </div>
+
+                <div class="flex flex-column gap16">
+                  <!-- input-field -->
+                  <div class="flex flex-column gap8">
+                    <label class="f6 fw5 lh-24 custom-text-secondary-color" for="address">Address</label>
+                    <input id="address" class="address-input common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color flex-max" placeholder="Enter customer address">
+                  </div>
+                  <button class="elm_wwGmbu flex justify-center items-center gap10 h36 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="blue">
+                      <span class="f5 fw5 lh-24 white">Add Another</span>
+                  </button>
+                </div>
+
+                <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="blue" data-attribute-next-step-button="1">
+                    <span class="f18 fw5 lh-24 white">Save Customer</span>
+                </button>
+              </div>
+            </div>
+          </form>
+          </div>
+
+          <!-- Select Address -->
+          <div data-step-name="select-address" style="display: none;" class="pa3">
+            <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
+                <h2 class="f3 fw6 lh-24 custom-text-primary-color tracked-tight-p01125">Create Quotes</h2>
+                <p class="f5 lh-24 mb0 custom-text-primary-color">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, perspiciatis laudantium in atque quas alias!</p>
                 <div class="flex flex-column mt3">
                   <div class="relative db">
-                      <input type="radio" name="address" value="address-1" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                      <input type="radio" name="address" value="address-1" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
                       <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
                           <div class="w24 h24 flex justify-center items-center relative">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
@@ -162,13 +222,13 @@
                             </svg>
                           </div>
                           <div class="flex flex-column elm_EThNYL">
-                              <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 1</h4>
+                              <h4 class="black poppins fs-noraml lh-24  ttc f5 fw5">123 Main Street, Apartment 4B, Anytown, State 54321, United States</h4>
                           </div>
                       </label>
                   </div>
     
                   <div class="relative db">
-                      <input type="radio" name="address" value="address-2" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                      <input type="radio" name="address" value="address-2" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
                       <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
                         <div class="w24 h24 flex justify-center items-center relative">
                           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
@@ -180,13 +240,13 @@
                           </svg>
                         </div>
                         <div class="flex flex-column elm_EThNYL">
-                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 2</h4>
+                            <h4 class="black poppins fs-noraml lh-24  ttc f5 fw5">456 Oak Avenue, Suite 201, Metropolis, Province X1Y 2Z3, Canada</h4>
                         </div>
                       </label>
                   </div>
 
                   <div class="relative db">
-                    <input type="radio" name="address" value="address-3" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
+                    <input type="radio" name="address" value="address-3" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
                     <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
                       <div class="w24 h24 flex justify-center items-center relative">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
@@ -198,101 +258,12 @@
                         </svg>
                       </div>
                       <div class="flex flex-column elm_EThNYL">
-                          <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 3</h4>
+                          <h4 class="black poppins fs-noraml lh-24  ttc f5 fw5">789 Elm Road, Block C, Floor 5, Cityville, Chittagong, Bangladesh</h4>
                       </div>
                     </label>
                   </div>
                 </div>
-              </div>
-
-              <!-- create-a-customer -->
-              <div class="flex-column gap8 dn" data-radio-content="create-customer">
-                  <!-- input-field -->
-                  <div class="flex flex-column gap8">
-                      <label class="f6 fw5 lh-24 custom-text-secondary-color" for="customer-name">Customer Name</label>
-                      <input id="customer-name" class="common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color" placeholder="Enter customer name">
-                  </div>
-
-                  <div class="container">
-                    <div class="flex items-center gap16 input-group">
-                      <input type="text" placeholder="Enter address" class="address-input common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color flex-max">
-                    </div>
-                    <button class="flex justify-center items-center gap10 h36 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="pink">
-                        <span class="f5 fw5 lh-24 white">Add Another</span>
-                    </button>
-                  </div>
-
-                  <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 ml-auto mt3" data-button-type="pink">
-                      <span class="f18 fw5 lh-24 white">Save Customer</span>
-                  </button>
-
-                  <div class="flex flex-column mt3">
-                    <div class="relative db">
-                        <input type="radio" name="address" value="address-1" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
-                        <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
-                            <div class="w24 h24 flex justify-center items-center relative">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
-                              </svg>
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
-                                <circle cx="12" cy="12" r="6" fill="#3300FF"/>
-                              </svg>
-                            </div>
-                            <div class="flex flex-column elm_EThNYL">
-                                <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 1</h4>
-                            </div>
-                        </label>
-                    </div>
-      
-                    <div class="relative db">
-                        <input type="radio" name="address" value="address-2" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
-                        <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
-                          <div class="w24 h24 flex justify-center items-center relative">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
-                            </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
-                              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
-                              <circle cx="12" cy="12" r="6" fill="#3300FF"/>
-                            </svg>
-                          </div>
-                          <div class="flex flex-column elm_EThNYL">
-                              <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 2</h4>
-                          </div>
-                        </label>
-                    </div>
-  
-                    <div class="relative db">
-                      <input type="radio" name="address" value="address-3" class="w-100 h88 z-5 o-0 relative elm_NnUnNh pointer">
-                      <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
-                        <div class="w24 h24 flex justify-center items-center relative">
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
-                          </svg>
-                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
-                            <circle cx="12" cy="12" r="6" fill="#3300FF"/>
-                          </svg>
-                        </div>
-                        <div class="flex flex-column elm_EThNYL">
-                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Address 3</h4>
-                        </div>
-                      </label>
-                    </div>
-                  </div>
-              </div>
-            </div>
-
-            <div class="flex gap16">
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-next-step-button="1">
-                  <span class="f18 fw5 lh-24 white">Next</span>
-              </button>
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink"  data-attribute-back-step-button="1">
-                  <span class="f18 fw5 lh-24 white">Back</span>
-              </button>
-              </div>
-          </form>
+            </form>
           </div>
 
           <!-- hourly rate -->
@@ -308,12 +279,16 @@
             </div>
 
             <div class="flex gap16">
-              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="pink" data-attribute-complete-submission-button="1">
+              <button class="flex justify-center items-center gap10 h48 w200 min-w100 pa2 br10 mt3" data-button-type="blue" data-attribute-complete-submission-button="1">
                   <span class="f18 fw5 lh-24 white">Proceed</span>
               </button>
               </div>
           </form>
           </div>
+      </div>
+      <!-- progress-bar -->
+      <div class="elm_wPYnYc flex overflow-hidden custom-light-sky-blue-bg-color">
+        <div class="elm_jwemmN db w-0 h-100 custom-blue-button-bg-color progress-bar"></div>
       </div>
       </div>
   </body>
@@ -328,7 +303,7 @@
       });
       stepContainer.setAttribute('data-current-step', stepName);
       updateButtonsVisibility(stepContainer);
-      // updateProgressBar(stepContainer);
+      updateProgressBar(stepContainer);
     }
     
     function updateProgressBar(stepContainer) {
@@ -337,7 +312,7 @@
       const stepIndex = Array.from(steps).findIndex(step => step.getAttribute('data-step-name') === currentStepName) + 1;
       const totalSteps = steps.length;
       const progressBar = stepContainer.querySelector('.progress-bar');
-      progressBar.textContent = `Step ${stepIndex}/${totalSteps}`;
+      progressBar.style.width = `${(stepIndex / totalSteps) * 100}%`;
     }
 
     function validateFieldsBeforeStepJump(stepContainer, nextStepName = null) {
@@ -477,6 +452,33 @@
           div.style.display = "none";
         });
       });
+    });
+
+    var mySelect = document.querySelector(".js-example-basic-single");
+    mySelect.onchange = (event) => {
+        nextStep(document.querySelector("[data-current-step='select-create-customer']"));
+    }
+
+    
+    const addButton = document.querySelector('.elm_wwGmbu');
+    let addressCount = 0;
+
+    addButton.addEventListener('click', function() {
+        if (addressCount < 2) {
+            addressCount++;
+
+            const newInput = document.createElement('input');
+            newInput.setAttribute('type', 'text');
+            newInput.setAttribute('class', 'address-input common_elm_QLpmZC h48 f5 lh-24 custom-text-primary-color flex-max');
+            newInput.setAttribute('placeholder', 'Enter another customer address');
+
+            const parentElement = addButton.parentElement;
+            parentElement.insertBefore(newInput, addButton);
+
+            if (addressCount === 2) {
+                addButton.disabled = true;
+            }
+        }
     });
   });
 </script>
