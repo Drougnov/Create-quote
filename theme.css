@@ -206,3 +206,8 @@ button[data-button-type="green"] {
 .common_elm_igAWdU {
     width: 10.85%;
 }
+
+/* finalize icon */
+.common_elm_fvpHdU{
+    min-width: 1.35rem;
+}
