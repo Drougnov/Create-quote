@@ -1,0 +1,208 @@
+/*
+* GLOBAL CSS VARIABLES
+*/
+:root {
+    /* Text Colours */
+    --text-colour-black: #303437;
+    --text-colour-light-black: #5f6369;
+
+    /* Table Colours */
+    --dashboard-table-border-colour: #dee5ec;
+    --dashboard-table-font-colour: #333;
+    --dashboard-table-heading-colour: #303437;
+    --default-rendered-table--background-colour: rgba(242, 246, 252, 0.50);
+
+    /* Quote-Statuses Background Colours */
+    --status-pending-background-colour: #DEE5EC;
+    --status-completed-background-colour: #23D997;
+    --status-approved-background-colour: #FCE40D;
+    --status-progress-background-colour: #6C69FF;
+    --status-cancelled-background-colour: #F24822;
+}
+
+
+/* primary black text colour */
+.custom-text-primary-color{
+    color: var(--text-colour-black);
+}
+/* secondary light black text colour */
+.custom-text-secondary-color{
+    color: var(--text-colour-light-black);
+}
+
+/* truncate-text one-line */
+.truncate-text {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+/* BUTTONS STYLES */
+button,
+input[type="submit"] {
+    position: relative;
+    cursor: pointer;
+    color: var(--button-text-color);
+    background: var(--button-background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--button-icon-gap);
+    border-width: var(--button-border-width);
+    border-style: solid;
+    border-color: var(--button-border-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+    padding: var(--button-padding);
+    box-shadow: var(--button-box-shadow);
+    transition: background-color 0.1s ease-in;
+    text-decoration: var(--button-text-decoration);
+    text-shadow: var(--button--text-shadow);
+    -webkit-border-radius: var(--button-border-radius);
+    -moz-border-radius: var(--button-border-radius);
+    -ms-border-radius: var(--button-border-radius);
+    -o-border-radius: var(--button-border-radius);
+    border-radius: var(--button-border-radius);
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+button > span,
+input[type="submit"] > span {
+    color: var(--button-text-color);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+}
+
+button:hover,
+input[type="submit"]:hover,
+.ASzXK:hover {
+    background: var(--button-hover-background-color) !important;
+    border-color: var(--button-hover-border-color) !important;
+    border-width: var(--button-hover-border-width) !important;
+    color: var(--button-hover-text-color) !important;
+}
+
+button:hover > span,
+input[type="submit"]:hover > span {
+    color: var(--button-hover-text-color);
+}
+
+button > svg,
+input[type="submit"] > svg {
+    fill: var(--button-text-color);
+}
+
+button[data-button-color="blue"],
+button[data-button-type="blue"] {
+    --button-text-color: #fff;
+    --button-background-color: #30f;
+    --button-border-color: #fff;
+    --button-border-width: 0rem;
+
+    --button-hover-background-color: #2c0da7;
+    --button-hover-text-color: #fff;
+    --button-hover-border-width: 0rem;
+    --button-hover-border-color: #fff;
+}
+button[data-button-color="green"],
+button[data-button-type="green"] {
+    --button-text-color: #fff;
+    --button-background-color: #23D997;
+    --button-border-color: #fff;
+    --button-border-width: 0rem;
+
+    --button-hover-background-color: #1eb880;
+    --button-hover-text-color: #fff;
+    --button-hover-border-width: 0rem;
+    --button-hover-border-color: #fff;
+}
+
+
+/* ICON PATH COLORS */
+.common_elm_wPflhb path {
+    fill: #ffffff;
+}
+
+
+/* table border */
+.custom-table-border-pale-blue{
+    border: 1px solid var(--dashboard-table-border-colour);
+}
+/* table border-bottom */
+.custom-table-border-bottom-pale-blue{
+    border-bottom: 1px solid var(--dashboard-table-border-colour);
+}
+
+
+/* quotes-status */
+.common_elm_CIuSdn {
+    height: 1.125rem;
+    min-width: 1.25rem;
+    border-radius: 0.4375rem;
+}
+
+/* pending-quotes-status-background-color */
+.status-bg-color-pending{
+    background-color: var(--status-pending-background-colour);
+}
+
+/* completed-quotes-status-background-color */
+.status-bg-color-completed{
+    background-color: var(--status-completed-background-colour);
+}
+
+/* approved-quotes-status-background-color */
+.status-bg-color-approved{
+    background-color: var(--status-approved-background-colour);
+}
+
+/* progress-quotes-status-background-color */
+.status-bg-color-progress{
+    background-color: var(--status-progress-background-colour);
+}
+
+/* cancelled-quotes-status-background-color */
+.status-bg-color-cancelled{
+    background-color: var(--status-cancelled-background-colour);
+}
+
+
+
+/* QUOTES-TABLE TEMPLATE */
+
+/* quotes-table main-container */
+.custom_elm_JrWqER {
+    width: 64.875rem;
+    height: 50.125rem;
+}
+
+/* quote-column */
+/* Staff column */
+.common_elm_YnwNUG,
+.common_elm_Lmkujk {
+    width: 7%;
+}
+
+/* Customer Details column */
+.common_elm_gxlsKW{
+    width: 19%;
+}
+
+/* Status column */
+.common_elm_mAbLiq{
+    width: 9%;
+}
+
+/* Date Created column */
+/* Expiry Date column */
+.common_elm_YgbzCl,
+.common_elm_igAWdU {
+    width: 10.85%;
+}

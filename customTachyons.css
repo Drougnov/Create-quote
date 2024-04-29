@@ -1,0 +1,35 @@
+/* Border Radius */
+.br--10 { border-radius: 0.625rem;}
+.br--24 { border-radius: 1.5rem;}
+
+/* Padding */
+.pad--top--24 { padding-top: 1.5rem; }
+.pad--bottom--24 { padding-bottom: 1.5rem; }
+.pad--left--24 { padding-left: 1.5rem; }
+.pad--right--24 { padding-right: 1.5rem; }
+
+/* Gap */
+.gap--4 { gap: 0.25rem; }
+.gap--8 { gap: 0.5rem; }
+.gap--10 { gap: 0.625rem; }
+.gap--16 { gap: 1rem; }
+
+/* Line Height */
+.lh--24 { line-height: 1.5rem;}
+
+/* Width */
+.w--max--content { width: max-content;}
+
+/* Height */
+.h--36 { height: 2.25rem;}
+
+/* Transition */
+.transition--all {transition-property: all;}
+.transition--duration--1 {transition-duration: 0.1s;}
+.transition--ease--in {transition-timing-function: ease-in;}
+
+/* Font */
+.font--poppins {font-family: "Poppins", sans-serif;}
+
+/* Word Wrap */
+.ww--break {word-wrap: break-word;}

@@ -11,194 +11,460 @@
     <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/popup.css">
     <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/popup.js"></script>
     
-    <link rel="stylesheet" id="hello-elementor-child-style-css" href="https://fs.codelinden.com/wp-content/themes/hello-child/style.css?ver=3" media="all">
     <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
-    <link rel="stylesheet" id="tachyons-stylesheet-css" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/customTachyonsStylesheet.css?ver=6.4.2" media="all">
     <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/main.js?ver=1.0" id="main-js"></script>
+    <link rel="stylesheet" href="https://playground.codelinden.com/client-projects/ezyquotes/assets/css/main.css">
 
-
-    <style>
-        /* container */
-        .custom_elm_JrWqER {
-            width: 64.875rem;
-            height: 50.125rem;
-            border-radius: 1.5rem;
-        }
-
-        /* quote-column */
-        .common_elm_YnwNUG {
-            width: 7%;
-        }
-
-        /* Customer & Address column */
-        .common_elm_gxlsKW{
-            width: 17%;
-        }
-
-        /* Status column */
-        .common_elm_mAbLiq{
-            width: 9%;
-        }
-
-        /* Date of Quote column */
-        /* Due Date column */
-        /* Amount column */ 
-        .common_elm_YgbzCl,
-        .common_elm_igAWdU,
-        .common_elm_eEGCwk {
-            width: 10.85%;
-        }
-    </style>
+    <!-- temporary stylesheets -->
+    <link rel="stylesheet" href="customTachyons.css">
+    <link rel="stylesheet" href="theme.css">
 </head>
 <body>
     <div style="padding: 2.12rem;">
     <!-- table-wrapper -->
         <div>
             <!-- container -->
-            <div class="custom_elm_JrWqER flex flex-column gap16 pt24 pb24 relative bg-white custom-pale-blue-border">
+            <div class="custom_elm_JrWqER flex flex-column gap--16 pad--top--24 pad--bottom--24 br--24 relative bg-white custom-table-border-pale-blue">
                 <!-- contents -->
                 <div class="flex flex-column">
                     <!-- table-container -->
-                    <div class="flex flex-column flex-max pt3 pb3">
+                    <div class="flex flex-column flex-max pb3">
                         <!-- table-header -->
-                        <div class="flex gap10 pb2 pl24 pr24 custom-pale-blue-border-bottom">
-                            <div class="common_elm_YnwNUG f6 lh-24 dark-gray o-50">Quote #</div>
-                            <div class="common_elm_gxlsKW f6 lh-24 dark-gray o-50">Customer & Address</div>
-                            <div class="common_elm_mAbLiq f6 lh-24 dark-gray o-50">Status</div>
-                            <div class="common_elm_YgbzCl f6 lh-24 dark-gray o-50">Date of Quote</div>
-                            <div class="common_elm_igAWdU f6 lh-24 dark-gray o-50">Due Date</div>
-                            <div class="common_elm_eEGCwk f6 lh-24 dark-gray o-50">Amount</div>
-                            <div class="flex-max f6 lh-24 dark-gray o-50">Actions</div>
+                        <div class="flex gap--10 pad--bottom--24 pad--left--24 pad--right--24 custom-table-border-bottom-pale-blue">
+                            <div class="common_elm_YnwNUG f6 lh--24 dark-gray o-50">Quote #</div>
+                            <div class="common_elm_gxlsKW f6 lh--24 dark-gray o-50">Customer Details</div>
+                            <div class="common_elm_mAbLiq f6 lh--24 dark-gray o-50">Status</div>
+                            <div class="common_elm_YgbzCl f6 lh--24 dark-gray o-50">Date Created</div>
+                            <div class="common_elm_igAWdU f6 lh--24 dark-gray o-50">Expiry Date</div>
+                            <div class="common_elm_Lmkujk f6 lh--24 dark-gray o-50">Staff</div>
+                            <div class="flex-max f6 lh--24 dark-gray o-50">Actions</div>
                         </div>
 
                         <!-- table-row -->
-                        <div class="common_elm_UrqFVZ flex items-center gap10 pt3 pb3 pl24 pr24">
-                            <!-- Quote ID -->
-                            <div class="common_elm_YnwNUG">
-                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4471</span>
-                            </div>
-                            <!-- Customer & Address -->
-                            <div class="common_elm_gxlsKW flex flex-column">
-                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Customer Name</h4>
-                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">Customer Address</span>
-                            </div>
-                            <!-- status -->
-                            <div class="common_elm_mAbLiq flex flex-column">
-                                <div class="common_elm_CIuSdn flex justify-center items-center gap10 pl1 pr1 w-max-content custom-pale-blue-bg-color">
-                                    <span class="f7 fw6 lh-24 tc custom-text-primary-color">Draft</span>
-                                </div>
-                            </div>
-                            <!-- Date of Quote -->
-                            <div class="common_elm_YgbzCl f6 lh-copy custom-text-secondary-color truncate-text">Apr 23, 2024</div>
-                            <!-- Due Date -->
-                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 23, 2024</div>
-                            <!-- amount -->
-                            <div class="common_elm_eEGCwk f6 fw5 lh-copy custom-text-primary-color truncate-text">USD100.00</div>
-                            <!-- actions -->
-                            <div class="flex justify-end items-center gap10 flex-max">
-                                <div class="flex items-center gap8">
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">View Quote</span>
-                                        </div>
-                                    </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Edit Quote</span>
-                                        </div>
-                                    </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Finalise Quote</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- table-row -->
-                        <div class="common_elm_UrqFVZ flex items-center gap10 pt3 pb3 pl24 pr24">
-                            <!-- Quote ID -->
-                            <div class="common_elm_YnwNUG">
-                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4472</span>
-                            </div>
-                            <!-- Customer & Address -->
-                            <div class="common_elm_gxlsKW flex flex-column">
-                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Customer Name</h4>
-                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">Customer Address</span>
-                            </div>
-                            <!-- status -->
-                            <div class="common_elm_mAbLiq flex flex-column">
-                                <div class="common_elm_CIuSdn flex justify-center items-center gap10 pl1 pr1 w-max-content custom-brand-blue-bg-color">
-                                    <span class="f7 fw6 lh-24 tc white">Pending</span>
-                                </div>
-                            </div>
-                            <!-- Date of Quote -->
-                            <div class="common_elm_YgbzCl f6 lh-copy custom-text-secondary-color truncate-text">Apr 23, 2024</div>
-                            <!-- Due Date -->
-                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 23, 2024</div>
-                            <!-- amount -->
-                            <div class="common_elm_eEGCwk f6 fw5 lh-copy custom-text-primary-color truncate-text">USD100.00</div>
-                            <!-- actions -->
-                            <div class="flex justify-end items-center gap10 flex-max">
-                                <div class="flex items-center gap8">
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">View Quote</span>
-                                        </div>
-                                    </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Edit Quote</span>
-                                        </div>
-                                    </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Finalise Quote</span>
-                                        </div>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- table-row -->
-                        <div class="common_elm_UrqFVZ flex items-center gap10 pt3 pb3 pl24 pr24">
+                        <div class="common_elm_UrqFVZ flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
                             <!-- Quote ID -->
                             <div class="common_elm_YnwNUG">
                                 <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4473</span>
                             </div>
-                            <!-- Customer & Address -->
+                            <!-- Customer Details -->
                             <div class="common_elm_gxlsKW flex flex-column">
-                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Customer Name</h4>
-                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">Customer Address</span>
+                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Michael Brown</h4>
+                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">789 Maple Drive, Los Angeles, CA 90001</span>
                             </div>
                             <!-- status -->
                             <div class="common_elm_mAbLiq flex flex-column">
-                                <div class="common_elm_CIuSdn flex justify-center items-center gap10 pl1 pr1 w-max-content custom-green-bg-color">
-                                    <span class="f7 fw6 lh-24 tc white">Completed</span>
+                                <div class="common_elm_CIuSdn flex justify-center items-center gap--10 pl1 pr1 w--max--content status-bg-color-pending">
+                                    <span class="f7 fw6 lh--24 tc white">Pending</span>
                                 </div>
                             </div>
                             <!-- Date of Quote -->
-                            <div class="common_elm_YgbzCl f6 lh-copy custom-text-secondary-color truncate-text">Apr 23, 2024</div>
+                            <div class="common_elm_YgbzCl f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 23, 2024</div>
                             <!-- Due Date -->
                             <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 23, 2024</div>
-                            <!-- amount -->
-                            <div class="common_elm_eEGCwk f6 fw5 lh-copy custom-text-primary-color truncate-text">USD100.00</div>
+                            <!-- Staff -->
+                            <div class="common_elm_Lmkujk f6 fw5 lh-copy custom-text-primary-color truncate-text">One</div>
                             <!-- actions -->
-                            <div class="flex justify-end items-center gap10 flex-max">
-                                <div class="flex items-center gap8">
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">View Quote</span>
-                                        </div>
+                            <div class="flex justify-end items-center gap--10 flex-max">
+                                <div class="flex items-center gap--8">
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_321_7060)">
+                                            <mask id="mask0_321_7060" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                            <path d="M24 0H0V24H24V0Z" fill="white"></path>
+                                            </mask>
+                                            <g mask="url(#mask0_321_7060)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1159 3.94435C17.6041 3.45623 18.3955 3.45621 18.8836 3.9443L20.0551 5.11559C20.5433 5.60374 20.5433 6.39524 20.0551 6.88342L19.4998 7.43878L16.5606 4.49964L17.1159 3.94435ZM15.4999 5.56029L18.4391 8.49944L8.24976 18.6888L5.31044 15.7495L15.4999 5.56029ZM4.54371 17.104L3.95584 20.0434L6.89516 19.4555L4.54371 17.104ZM3.46946 15.4691L14.9555 3.98343L14.9694 3.96912L14.9837 3.95517L16.0553 2.88367C17.1292 1.80981 18.8702 1.80977 19.9442 2.88357L21.1157 4.05486C22.1897 5.12878 22.1898 6.87009 21.1158 7.94408L20.0301 9.02977L8.53009 20.5298C8.42539 20.6345 8.29204 20.7058 8.14685 20.7349L3.14686 21.7349C2.90096 21.7841 2.64676 21.7071 2.46944 21.5298C2.29212 21.3525 2.21515 21.0982 2.26433 20.8524L3.26434 15.8524C3.29338 15.7072 3.36475 15.5738 3.46946 15.4691Z" fill="#303437"></path>
+                                            </g>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_321_7060">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Edit</span>
                                     </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Edit Quote</span>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="green">
+                                        <div class="w1 h1 flex justify-center items-center relative">
+                                            <svg class="w24 h24 common_elm_wPflhb absolute" data-icon="check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44746 11.0304C6.05694 10.6399 5.42377 10.6399 5.03325 11.0304C4.64273 11.4209 4.64273 12.0541 5.03325 12.4446L9.77438 17.1857C10.1649 17.5762 10.7981 17.5762 11.1886 17.1857L18.9668 9.40755C19.3573 9.01702 19.3573 8.38386 18.9668 7.99333C18.5762 7.60281 17.9431 7.60281 17.5526 7.99333L10.4815 15.0644L6.44746 11.0304Z" fill="#303437"></path>
+                                            </svg>
                                         </div>
+                                        <span class="font--poppins fw5 ww--break f7">Finalize</span>
                                     </button>
-                                    <button type="button" class="caret-transparent transition-all duration-1 ease-in br10 inline-flex justify-center items-center gap10 pointerh36 pa-4 ph8" data-button-color="blue">
-                                        <div data-button-text-wrap="" class="flex items-center gap8">
-                                            <span class="poppins fw5 wb f7">Finalise Quote</span>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="share" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_539_6325)">
+                                            <path d="M11.9979 2C12.2545 1.99947 12.5113 2.0971 12.7071 2.29289L17.2071 6.79289C17.5976 7.18342 17.5976 7.81658 17.2071 8.20711C16.8166 8.59763 16.1834 8.59763 15.7929 8.20711L12.9958 5.41006V16C12.9958 16.5523 12.5481 17 11.9958 17C11.4436 17 10.9958 16.5523 10.9958 16V5.41836L8.20711 8.20711C7.81658 8.59763 7.18342 8.59763 6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289L11.2365 2.34927C11.4199 2.13546 11.6921 2 11.9958 2L11.9979 2Z" fill="#333333"></path>
+                                            <path d="M21 11C21.5523 11 22 11.4477 22 12V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V12.0042C2 11.4519 2.44772 11.0042 3 11.0042C3.55228 11.0042 4 11.4519 4 12.0042V20H20V12C20 11.4477 20.4477 11 21 11Z" fill="#333333"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_539_6325">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Share</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <style type="text/css"> .st0{fill:#000000;} </style> 
+                                                <g> 
+                                                    <path class="st0" d="M378.413,0H208.297h-13.182L185.8,9.314L57.02,138.102l-9.314,9.314v13.176v265.514 c0,47.36,38.528,85.895,85.896,85.895h244.811c47.353,0,85.881-38.535,85.881-85.895V85.896C464.294,38.528,425.766,0,378.413,0z M432.497,426.105c0,29.877-24.214,54.091-54.084,54.091H133.602c-29.884,0-54.098-24.214-54.098-54.091V160.591h83.716 c24.885,0,45.077-20.178,45.077-45.07V31.804h170.116c29.87,0,54.084,24.214,54.084,54.092V426.105z"></path> 
+                                                    <path class="st0" d="M171.947,252.785h-28.529c-5.432,0-8.686,3.533-8.686,8.825v73.754c0,6.388,4.204,10.599,10.041,10.599 c5.711,0,9.914-4.21,9.914-10.599v-22.406c0-0.545,0.279-0.817,0.824-0.817h16.436c20.095,0,32.188-12.226,32.188-29.612 C204.136,264.871,192.182,252.785,171.947,252.785z M170.719,294.888h-15.208c-0.545,0-0.824-0.272-0.824-0.81v-23.23 c0-0.545,0.279-0.816,0.824-0.816h15.208c8.42,0,13.447,5.027,13.447,12.498C184.167,290,179.139,294.888,170.719,294.888z"></path> 
+                                                    <path class="st0" d="M250.191,252.785h-21.868c-5.432,0-8.686,3.533-8.686,8.825v74.843c0,5.3,3.253,8.693,8.686,8.693h21.868 c19.69,0,31.923-6.249,36.81-21.324c1.76-5.3,2.723-11.681,2.723-24.857c0-13.175-0.964-19.557-2.723-24.856 C282.113,259.034,269.881,252.785,250.191,252.785z M267.856,316.896c-2.318,7.331-8.965,10.459-18.21,10.459h-9.23 c-0.545,0-0.824-0.272-0.824-0.816v-55.146c0-0.545,0.279-0.817,0.824-0.817h9.23c9.245,0,15.892,3.128,18.21,10.46 c0.95,3.128,1.62,8.56,1.62,17.93C269.476,308.336,268.805,313.768,267.856,316.896z"></path> 
+                                                    <path class="st0" d="M361.167,252.785h-44.812c-5.432,0-8.7,3.533-8.7,8.825v73.754c0,6.388,4.218,10.599,10.055,10.599 c5.697,0,9.914-4.21,9.914-10.599v-26.351c0-0.538,0.265-0.81,0.81-0.81h26.086c5.837,0,9.23-3.532,9.23-8.56 c0-5.028-3.393-8.553-9.23-8.553h-26.086c-0.545,0-0.81-0.272-0.81-0.817v-19.425c0-0.545,0.265-0.816,0.81-0.816h32.733 c5.572,0,9.245-3.666,9.245-8.553C370.411,256.45,366.738,252.785,361.167,252.785z"></path> 
+                                                </g> 
+                                            </g>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">View</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="common_elm_UrqFVZ flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Quote ID -->
+                            <div class="common_elm_YnwNUG">
+                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4474</span>
+                            </div>
+                            <!-- Customer Details -->
+                            <div class="common_elm_gxlsKW flex flex-column">
+                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Emily Johnson</h4>
+                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">123 Maple Street, Springfield, IL 62701, USA</span>
+                            </div>
+                            <!-- status -->
+                            <div class="common_elm_mAbLiq flex flex-column">
+                                <div class="common_elm_CIuSdn flex justify-center items-center gap--10 pl1 pr1 w--max--content status-bg-color-completed">
+                                    <span class="f7 fw6 lh--24 tc white">Completed</span>
+                                </div>
+                            </div>
+                            <!-- Date of Quote -->
+                            <div class="common_elm_YgbzCl f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 24, 2024</div>
+                            <!-- Due Date -->
+                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 24, 2024</div>
+                            <!-- Staff -->
+                            <div class="common_elm_Lmkujk f6 fw5 lh-copy custom-text-primary-color truncate-text">Two</div>
+                            <!-- actions -->
+                            <div class="flex justify-end items-center gap--10 flex-max">
+                                <div class="flex items-center gap--8">
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_321_7060)">
+                                            <mask id="mask0_321_7060" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                            <path d="M24 0H0V24H24V0Z" fill="white"></path>
+                                            </mask>
+                                            <g mask="url(#mask0_321_7060)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1159 3.94435C17.6041 3.45623 18.3955 3.45621 18.8836 3.9443L20.0551 5.11559C20.5433 5.60374 20.5433 6.39524 20.0551 6.88342L19.4998 7.43878L16.5606 4.49964L17.1159 3.94435ZM15.4999 5.56029L18.4391 8.49944L8.24976 18.6888L5.31044 15.7495L15.4999 5.56029ZM4.54371 17.104L3.95584 20.0434L6.89516 19.4555L4.54371 17.104ZM3.46946 15.4691L14.9555 3.98343L14.9694 3.96912L14.9837 3.95517L16.0553 2.88367C17.1292 1.80981 18.8702 1.80977 19.9442 2.88357L21.1157 4.05486C22.1897 5.12878 22.1898 6.87009 21.1158 7.94408L20.0301 9.02977L8.53009 20.5298C8.42539 20.6345 8.29204 20.7058 8.14685 20.7349L3.14686 21.7349C2.90096 21.7841 2.64676 21.7071 2.46944 21.5298C2.29212 21.3525 2.21515 21.0982 2.26433 20.8524L3.26434 15.8524C3.29338 15.7072 3.36475 15.5738 3.46946 15.4691Z" fill="#303437"></path>
+                                            </g>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_321_7060">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Edit</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="green">
+                                        <div class="w1 h1 flex justify-center items-center relative">
+                                            <svg class="w24 h24 common_elm_wPflhb absolute" data-icon="check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44746 11.0304C6.05694 10.6399 5.42377 10.6399 5.03325 11.0304C4.64273 11.4209 4.64273 12.0541 5.03325 12.4446L9.77438 17.1857C10.1649 17.5762 10.7981 17.5762 11.1886 17.1857L18.9668 9.40755C19.3573 9.01702 19.3573 8.38386 18.9668 7.99333C18.5762 7.60281 17.9431 7.60281 17.5526 7.99333L10.4815 15.0644L6.44746 11.0304Z" fill="#303437"></path>
+                                            </svg>
                                         </div>
+                                        <span class="font--poppins fw5 ww--break f7">Finalize</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="share" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_539_6325)">
+                                            <path d="M11.9979 2C12.2545 1.99947 12.5113 2.0971 12.7071 2.29289L17.2071 6.79289C17.5976 7.18342 17.5976 7.81658 17.2071 8.20711C16.8166 8.59763 16.1834 8.59763 15.7929 8.20711L12.9958 5.41006V16C12.9958 16.5523 12.5481 17 11.9958 17C11.4436 17 10.9958 16.5523 10.9958 16V5.41836L8.20711 8.20711C7.81658 8.59763 7.18342 8.59763 6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289L11.2365 2.34927C11.4199 2.13546 11.6921 2 11.9958 2L11.9979 2Z" fill="#333333"></path>
+                                            <path d="M21 11C21.5523 11 22 11.4477 22 12V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V12.0042C2 11.4519 2.44772 11.0042 3 11.0042C3.55228 11.0042 4 11.4519 4 12.0042V20H20V12C20 11.4477 20.4477 11 21 11Z" fill="#333333"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_539_6325">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Share</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <style type="text/css"> .st0{fill:#000000;} </style> 
+                                                <g> 
+                                                    <path class="st0" d="M378.413,0H208.297h-13.182L185.8,9.314L57.02,138.102l-9.314,9.314v13.176v265.514 c0,47.36,38.528,85.895,85.896,85.895h244.811c47.353,0,85.881-38.535,85.881-85.895V85.896C464.294,38.528,425.766,0,378.413,0z M432.497,426.105c0,29.877-24.214,54.091-54.084,54.091H133.602c-29.884,0-54.098-24.214-54.098-54.091V160.591h83.716 c24.885,0,45.077-20.178,45.077-45.07V31.804h170.116c29.87,0,54.084,24.214,54.084,54.092V426.105z"></path> 
+                                                    <path class="st0" d="M171.947,252.785h-28.529c-5.432,0-8.686,3.533-8.686,8.825v73.754c0,6.388,4.204,10.599,10.041,10.599 c5.711,0,9.914-4.21,9.914-10.599v-22.406c0-0.545,0.279-0.817,0.824-0.817h16.436c20.095,0,32.188-12.226,32.188-29.612 C204.136,264.871,192.182,252.785,171.947,252.785z M170.719,294.888h-15.208c-0.545,0-0.824-0.272-0.824-0.81v-23.23 c0-0.545,0.279-0.816,0.824-0.816h15.208c8.42,0,13.447,5.027,13.447,12.498C184.167,290,179.139,294.888,170.719,294.888z"></path> 
+                                                    <path class="st0" d="M250.191,252.785h-21.868c-5.432,0-8.686,3.533-8.686,8.825v74.843c0,5.3,3.253,8.693,8.686,8.693h21.868 c19.69,0,31.923-6.249,36.81-21.324c1.76-5.3,2.723-11.681,2.723-24.857c0-13.175-0.964-19.557-2.723-24.856 C282.113,259.034,269.881,252.785,250.191,252.785z M267.856,316.896c-2.318,7.331-8.965,10.459-18.21,10.459h-9.23 c-0.545,0-0.824-0.272-0.824-0.816v-55.146c0-0.545,0.279-0.817,0.824-0.817h9.23c9.245,0,15.892,3.128,18.21,10.46 c0.95,3.128,1.62,8.56,1.62,17.93C269.476,308.336,268.805,313.768,267.856,316.896z"></path> 
+                                                    <path class="st0" d="M361.167,252.785h-44.812c-5.432,0-8.7,3.533-8.7,8.825v73.754c0,6.388,4.218,10.599,10.055,10.599 c5.697,0,9.914-4.21,9.914-10.599v-26.351c0-0.538,0.265-0.81,0.81-0.81h26.086c5.837,0,9.23-3.532,9.23-8.56 c0-5.028-3.393-8.553-9.23-8.553h-26.086c-0.545,0-0.81-0.272-0.81-0.817v-19.425c0-0.545,0.265-0.816,0.81-0.816h32.733 c5.572,0,9.245-3.666,9.245-8.553C370.411,256.45,366.738,252.785,361.167,252.785z"></path> 
+                                                </g> 
+                                            </g>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">View</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="common_elm_UrqFVZ flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Quote ID -->
+                            <div class="common_elm_YnwNUG">
+                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4475</span>
+                            </div>
+                            <!-- Customer Details -->
+                            <div class="common_elm_gxlsKW flex flex-column">
+                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Michael Patel</h4>
+                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">456 Oak Avenue, Arlington, VA 22201, USA</span>
+                            </div>
+                            <!-- status -->
+                            <div class="common_elm_mAbLiq flex flex-column">
+                                <div class="common_elm_CIuSdn flex justify-center items-center gap--10 pl1 pr1 w--max--content status-bg-color-approved">
+                                    <span class="f7 fw6 lh--24 tc white">Approved</span>
+                                </div>
+                            </div>
+                            <!-- Date of Quote -->
+                            <div class="common_elm_YgbzCl f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 25, 2024</div>
+                            <!-- Due Date -->
+                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">Apr 25, 2024</div>
+                            <!-- Staff -->
+                            <div class="common_elm_Lmkujk f6 fw5 lh-copy custom-text-primary-color truncate-text">Many</div>
+                            <!-- actions -->
+                            <div class="flex justify-end items-center gap--10 flex-max">
+                                <div class="flex items-center gap--8">
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_321_7060)">
+                                            <mask id="mask0_321_7060" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                            <path d="M24 0H0V24H24V0Z" fill="white"></path>
+                                            </mask>
+                                            <g mask="url(#mask0_321_7060)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1159 3.94435C17.6041 3.45623 18.3955 3.45621 18.8836 3.9443L20.0551 5.11559C20.5433 5.60374 20.5433 6.39524 20.0551 6.88342L19.4998 7.43878L16.5606 4.49964L17.1159 3.94435ZM15.4999 5.56029L18.4391 8.49944L8.24976 18.6888L5.31044 15.7495L15.4999 5.56029ZM4.54371 17.104L3.95584 20.0434L6.89516 19.4555L4.54371 17.104ZM3.46946 15.4691L14.9555 3.98343L14.9694 3.96912L14.9837 3.95517L16.0553 2.88367C17.1292 1.80981 18.8702 1.80977 19.9442 2.88357L21.1157 4.05486C22.1897 5.12878 22.1898 6.87009 21.1158 7.94408L20.0301 9.02977L8.53009 20.5298C8.42539 20.6345 8.29204 20.7058 8.14685 20.7349L3.14686 21.7349C2.90096 21.7841 2.64676 21.7071 2.46944 21.5298C2.29212 21.3525 2.21515 21.0982 2.26433 20.8524L3.26434 15.8524C3.29338 15.7072 3.36475 15.5738 3.46946 15.4691Z" fill="#303437"></path>
+                                            </g>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_321_7060">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Edit</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="green">
+                                        <div class="w1 h1 flex justify-center items-center relative">
+                                            <svg class="w24 h24 common_elm_wPflhb absolute" data-icon="check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44746 11.0304C6.05694 10.6399 5.42377 10.6399 5.03325 11.0304C4.64273 11.4209 4.64273 12.0541 5.03325 12.4446L9.77438 17.1857C10.1649 17.5762 10.7981 17.5762 11.1886 17.1857L18.9668 9.40755C19.3573 9.01702 19.3573 8.38386 18.9668 7.99333C18.5762 7.60281 17.9431 7.60281 17.5526 7.99333L10.4815 15.0644L6.44746 11.0304Z" fill="#303437"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="font--poppins fw5 ww--break f7">Finalize</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="share" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_539_6325)">
+                                            <path d="M11.9979 2C12.2545 1.99947 12.5113 2.0971 12.7071 2.29289L17.2071 6.79289C17.5976 7.18342 17.5976 7.81658 17.2071 8.20711C16.8166 8.59763 16.1834 8.59763 15.7929 8.20711L12.9958 5.41006V16C12.9958 16.5523 12.5481 17 11.9958 17C11.4436 17 10.9958 16.5523 10.9958 16V5.41836L8.20711 8.20711C7.81658 8.59763 7.18342 8.59763 6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289L11.2365 2.34927C11.4199 2.13546 11.6921 2 11.9958 2L11.9979 2Z" fill="#333333"></path>
+                                            <path d="M21 11C21.5523 11 22 11.4477 22 12V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V12.0042C2 11.4519 2.44772 11.0042 3 11.0042C3.55228 11.0042 4 11.4519 4 12.0042V20H20V12C20 11.4477 20.4477 11 21 11Z" fill="#333333"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_539_6325">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Share</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <style type="text/css"> .st0{fill:#000000;} </style> 
+                                                <g> 
+                                                    <path class="st0" d="M378.413,0H208.297h-13.182L185.8,9.314L57.02,138.102l-9.314,9.314v13.176v265.514 c0,47.36,38.528,85.895,85.896,85.895h244.811c47.353,0,85.881-38.535,85.881-85.895V85.896C464.294,38.528,425.766,0,378.413,0z M432.497,426.105c0,29.877-24.214,54.091-54.084,54.091H133.602c-29.884,0-54.098-24.214-54.098-54.091V160.591h83.716 c24.885,0,45.077-20.178,45.077-45.07V31.804h170.116c29.87,0,54.084,24.214,54.084,54.092V426.105z"></path> 
+                                                    <path class="st0" d="M171.947,252.785h-28.529c-5.432,0-8.686,3.533-8.686,8.825v73.754c0,6.388,4.204,10.599,10.041,10.599 c5.711,0,9.914-4.21,9.914-10.599v-22.406c0-0.545,0.279-0.817,0.824-0.817h16.436c20.095,0,32.188-12.226,32.188-29.612 C204.136,264.871,192.182,252.785,171.947,252.785z M170.719,294.888h-15.208c-0.545,0-0.824-0.272-0.824-0.81v-23.23 c0-0.545,0.279-0.816,0.824-0.816h15.208c8.42,0,13.447,5.027,13.447,12.498C184.167,290,179.139,294.888,170.719,294.888z"></path> 
+                                                    <path class="st0" d="M250.191,252.785h-21.868c-5.432,0-8.686,3.533-8.686,8.825v74.843c0,5.3,3.253,8.693,8.686,8.693h21.868 c19.69,0,31.923-6.249,36.81-21.324c1.76-5.3,2.723-11.681,2.723-24.857c0-13.175-0.964-19.557-2.723-24.856 C282.113,259.034,269.881,252.785,250.191,252.785z M267.856,316.896c-2.318,7.331-8.965,10.459-18.21,10.459h-9.23 c-0.545,0-0.824-0.272-0.824-0.816v-55.146c0-0.545,0.279-0.817,0.824-0.817h9.23c9.245,0,15.892,3.128,18.21,10.46 c0.95,3.128,1.62,8.56,1.62,17.93C269.476,308.336,268.805,313.768,267.856,316.896z"></path> 
+                                                    <path class="st0" d="M361.167,252.785h-44.812c-5.432,0-8.7,3.533-8.7,8.825v73.754c0,6.388,4.218,10.599,10.055,10.599 c5.697,0,9.914-4.21,9.914-10.599v-26.351c0-0.538,0.265-0.81,0.81-0.81h26.086c5.837,0,9.23-3.532,9.23-8.56 c0-5.028-3.393-8.553-9.23-8.553h-26.086c-0.545,0-0.81-0.272-0.81-0.817v-19.425c0-0.545,0.265-0.816,0.81-0.816h32.733 c5.572,0,9.245-3.666,9.245-8.553C370.411,256.45,366.738,252.785,361.167,252.785z"></path> 
+                                                </g> 
+                                            </g>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">View</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="common_elm_UrqFVZ flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Quote ID -->
+                            <div class="common_elm_YnwNUG">
+                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4476</span>
+                            </div>
+                            <!-- Customer Details -->
+                            <div class="common_elm_gxlsKW flex flex-column">
+                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">Sarah Garcia</h4>
+                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">789 Elm Road, Denver, CO 80202, USA</span>
+                            </div>
+                            <!-- status -->
+                            <div class="common_elm_mAbLiq flex flex-column">
+                                <div class="common_elm_CIuSdn flex justify-center items-center gap--10 pl1 pr1 w--max--content status-bg-color-progress">
+                                    <span class="f7 fw6 lh--24 tc white">Progress</span>
+                                </div>
+                            </div>
+                            <!-- Date of Quote -->
+                            <div class="common_elm_YgbzCl f6 fw5 lh-copy custom-text-primary-color truncate-text">May 26, 2024</div>
+                            <!-- Due Date -->
+                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">May 28, 2024</div>
+                            <!-- Staff -->
+                            <div class="common_elm_Lmkujk f6 fw5 lh-copy custom-text-primary-color truncate-text">All</div>
+                            <!-- actions -->
+                            <div class="flex justify-end items-center gap--10 flex-max">
+                                <div class="flex items-center gap--8">
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_321_7060)">
+                                            <mask id="mask0_321_7060" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                            <path d="M24 0H0V24H24V0Z" fill="white"></path>
+                                            </mask>
+                                            <g mask="url(#mask0_321_7060)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1159 3.94435C17.6041 3.45623 18.3955 3.45621 18.8836 3.9443L20.0551 5.11559C20.5433 5.60374 20.5433 6.39524 20.0551 6.88342L19.4998 7.43878L16.5606 4.49964L17.1159 3.94435ZM15.4999 5.56029L18.4391 8.49944L8.24976 18.6888L5.31044 15.7495L15.4999 5.56029ZM4.54371 17.104L3.95584 20.0434L6.89516 19.4555L4.54371 17.104ZM3.46946 15.4691L14.9555 3.98343L14.9694 3.96912L14.9837 3.95517L16.0553 2.88367C17.1292 1.80981 18.8702 1.80977 19.9442 2.88357L21.1157 4.05486C22.1897 5.12878 22.1898 6.87009 21.1158 7.94408L20.0301 9.02977L8.53009 20.5298C8.42539 20.6345 8.29204 20.7058 8.14685 20.7349L3.14686 21.7349C2.90096 21.7841 2.64676 21.7071 2.46944 21.5298C2.29212 21.3525 2.21515 21.0982 2.26433 20.8524L3.26434 15.8524C3.29338 15.7072 3.36475 15.5738 3.46946 15.4691Z" fill="#303437"></path>
+                                            </g>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_321_7060">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Edit</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="green">
+                                        <div class="w1 h1 flex justify-center items-center relative">
+                                            <svg class="w24 h24 common_elm_wPflhb absolute" data-icon="check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44746 11.0304C6.05694 10.6399 5.42377 10.6399 5.03325 11.0304C4.64273 11.4209 4.64273 12.0541 5.03325 12.4446L9.77438 17.1857C10.1649 17.5762 10.7981 17.5762 11.1886 17.1857L18.9668 9.40755C19.3573 9.01702 19.3573 8.38386 18.9668 7.99333C18.5762 7.60281 17.9431 7.60281 17.5526 7.99333L10.4815 15.0644L6.44746 11.0304Z" fill="#303437"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="font--poppins fw5 ww--break f7">Finalize</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="share" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_539_6325)">
+                                            <path d="M11.9979 2C12.2545 1.99947 12.5113 2.0971 12.7071 2.29289L17.2071 6.79289C17.5976 7.18342 17.5976 7.81658 17.2071 8.20711C16.8166 8.59763 16.1834 8.59763 15.7929 8.20711L12.9958 5.41006V16C12.9958 16.5523 12.5481 17 11.9958 17C11.4436 17 10.9958 16.5523 10.9958 16V5.41836L8.20711 8.20711C7.81658 8.59763 7.18342 8.59763 6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289L11.2365 2.34927C11.4199 2.13546 11.6921 2 11.9958 2L11.9979 2Z" fill="#333333"></path>
+                                            <path d="M21 11C21.5523 11 22 11.4477 22 12V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V12.0042C2 11.4519 2.44772 11.0042 3 11.0042C3.55228 11.0042 4 11.4519 4 12.0042V20H20V12C20 11.4477 20.4477 11 21 11Z" fill="#333333"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_539_6325">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Share</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <style type="text/css"> .st0{fill:#000000;} </style> 
+                                                <g> 
+                                                    <path class="st0" d="M378.413,0H208.297h-13.182L185.8,9.314L57.02,138.102l-9.314,9.314v13.176v265.514 c0,47.36,38.528,85.895,85.896,85.895h244.811c47.353,0,85.881-38.535,85.881-85.895V85.896C464.294,38.528,425.766,0,378.413,0z M432.497,426.105c0,29.877-24.214,54.091-54.084,54.091H133.602c-29.884,0-54.098-24.214-54.098-54.091V160.591h83.716 c24.885,0,45.077-20.178,45.077-45.07V31.804h170.116c29.87,0,54.084,24.214,54.084,54.092V426.105z"></path> 
+                                                    <path class="st0" d="M171.947,252.785h-28.529c-5.432,0-8.686,3.533-8.686,8.825v73.754c0,6.388,4.204,10.599,10.041,10.599 c5.711,0,9.914-4.21,9.914-10.599v-22.406c0-0.545,0.279-0.817,0.824-0.817h16.436c20.095,0,32.188-12.226,32.188-29.612 C204.136,264.871,192.182,252.785,171.947,252.785z M170.719,294.888h-15.208c-0.545,0-0.824-0.272-0.824-0.81v-23.23 c0-0.545,0.279-0.816,0.824-0.816h15.208c8.42,0,13.447,5.027,13.447,12.498C184.167,290,179.139,294.888,170.719,294.888z"></path> 
+                                                    <path class="st0" d="M250.191,252.785h-21.868c-5.432,0-8.686,3.533-8.686,8.825v74.843c0,5.3,3.253,8.693,8.686,8.693h21.868 c19.69,0,31.923-6.249,36.81-21.324c1.76-5.3,2.723-11.681,2.723-24.857c0-13.175-0.964-19.557-2.723-24.856 C282.113,259.034,269.881,252.785,250.191,252.785z M267.856,316.896c-2.318,7.331-8.965,10.459-18.21,10.459h-9.23 c-0.545,0-0.824-0.272-0.824-0.816v-55.146c0-0.545,0.279-0.817,0.824-0.817h9.23c9.245,0,15.892,3.128,18.21,10.46 c0.95,3.128,1.62,8.56,1.62,17.93C269.476,308.336,268.805,313.768,267.856,316.896z"></path> 
+                                                    <path class="st0" d="M361.167,252.785h-44.812c-5.432,0-8.7,3.533-8.7,8.825v73.754c0,6.388,4.218,10.599,10.055,10.599 c5.697,0,9.914-4.21,9.914-10.599v-26.351c0-0.538,0.265-0.81,0.81-0.81h26.086c5.837,0,9.23-3.532,9.23-8.56 c0-5.028-3.393-8.553-9.23-8.553h-26.086c-0.545,0-0.81-0.272-0.81-0.817v-19.425c0-0.545,0.265-0.816,0.81-0.816h32.733 c5.572,0,9.245-3.666,9.245-8.553C370.411,256.45,366.738,252.785,361.167,252.785z"></path> 
+                                                </g> 
+                                            </g>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">View</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="common_elm_UrqFVZ flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Quote ID -->
+                            <div class="common_elm_YnwNUG">
+                                <span class="f6 lh-copy custom-text-secondary-color truncate-text">#4477</span>
+                            </div>
+                            <!-- Customer Details -->
+                            <div class="common_elm_gxlsKW flex flex-column">
+                                <h4 class="f6 fw6 lh-copy truncate-text custom-text-primary-color">David Rodriguez</h4>
+                                <span class="f7 lh-copy truncate-text custom-text-secondary-color">321 Pine Lane, Miami, FL 33101, USA</span>
+                            </div>
+                            <!-- status -->
+                            <div class="common_elm_mAbLiq flex flex-column">
+                                <div class="common_elm_CIuSdn flex justify-center items-center gap--10 pl1 pr1 w--max--content status-bg-color-cancelled">
+                                    <span class="f7 fw6 lh--24 tc white">Cancelled</span>
+                                </div>
+                            </div>
+                            <!-- Date of Quote -->
+                            <div class="common_elm_YgbzCl f6 fw5 lh-copy custom-text-primary-color truncate-text">June 23, 2024</div>
+                            <!-- Due Date -->
+                            <div class="common_elm_igAWdU f6 fw5 lh-copy custom-text-primary-color truncate-text">June 26, 2024</div>
+                            <!-- Staff -->
+                            <div class="common_elm_Lmkujk f6 fw5 lh-copy custom-text-primary-color truncate-text">One</div>
+                            <!-- actions -->
+                            <div class="flex justify-end items-center gap--10 flex-max">
+                                <div class="flex items-center gap--8">
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="edit" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_321_7060)">
+                                            <mask id="mask0_321_7060" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+                                            <path d="M24 0H0V24H24V0Z" fill="white"></path>
+                                            </mask>
+                                            <g mask="url(#mask0_321_7060)">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M17.1159 3.94435C17.6041 3.45623 18.3955 3.45621 18.8836 3.9443L20.0551 5.11559C20.5433 5.60374 20.5433 6.39524 20.0551 6.88342L19.4998 7.43878L16.5606 4.49964L17.1159 3.94435ZM15.4999 5.56029L18.4391 8.49944L8.24976 18.6888L5.31044 15.7495L15.4999 5.56029ZM4.54371 17.104L3.95584 20.0434L6.89516 19.4555L4.54371 17.104ZM3.46946 15.4691L14.9555 3.98343L14.9694 3.96912L14.9837 3.95517L16.0553 2.88367C17.1292 1.80981 18.8702 1.80977 19.9442 2.88357L21.1157 4.05486C22.1897 5.12878 22.1898 6.87009 21.1158 7.94408L20.0301 9.02977L8.53009 20.5298C8.42539 20.6345 8.29204 20.7058 8.14685 20.7349L3.14686 21.7349C2.90096 21.7841 2.64676 21.7071 2.46944 21.5298C2.29212 21.3525 2.21515 21.0982 2.26433 20.8524L3.26434 15.8524C3.29338 15.7072 3.36475 15.5738 3.46946 15.4691Z" fill="#303437"></path>
+                                            </g>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_321_7060">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Edit</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="green">
+                                        <div class="w1 h1 flex justify-center items-center relative">
+                                            <svg class="w24 h24 common_elm_wPflhb absolute" data-icon="check" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.44746 11.0304C6.05694 10.6399 5.42377 10.6399 5.03325 11.0304C4.64273 11.4209 4.64273 12.0541 5.03325 12.4446L9.77438 17.1857C10.1649 17.5762 10.7981 17.5762 11.1886 17.1857L18.9668 9.40755C19.3573 9.01702 19.3573 8.38386 18.9668 7.99333C18.5762 7.60281 17.9431 7.60281 17.5526 7.99333L10.4815 15.0644L6.44746 11.0304Z" fill="#303437"></path>
+                                            </svg>
+                                        </div>
+                                        <span class="font--poppins fw5 ww--break f7">Finalize</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" data-icon="share" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_539_6325)">
+                                            <path d="M11.9979 2C12.2545 1.99947 12.5113 2.0971 12.7071 2.29289L17.2071 6.79289C17.5976 7.18342 17.5976 7.81658 17.2071 8.20711C16.8166 8.59763 16.1834 8.59763 15.7929 8.20711L12.9958 5.41006V16C12.9958 16.5523 12.5481 17 11.9958 17C11.4436 17 10.9958 16.5523 10.9958 16V5.41836L8.20711 8.20711C7.81658 8.59763 7.18342 8.59763 6.79289 8.20711C6.40237 7.81658 6.40237 7.18342 6.79289 6.79289L11.2365 2.34927C11.4199 2.13546 11.6921 2 11.9958 2L11.9979 2Z" fill="#333333"></path>
+                                            <path d="M21 11C21.5523 11 22 11.4477 22 12V21C22 21.5523 21.5523 22 21 22H3C2.44772 22 2 21.5523 2 21V12.0042C2 11.4519 2.44772 11.0042 3 11.0042C3.55228 11.0042 4 11.4519 4 12.0042V20H20V12C20 11.4477 20.4477 11 21 11Z" fill="#333333"></path>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_539_6325">
+                                            <rect width="24" height="24" fill="white"></rect>
+                                            </clipPath>
+                                            </defs>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">Share</span>
+                                    </button>
+                                    <button type="button" class="transition--all transition--duration--1 transition--ease--in br--10 inline-flex justify-center items-center gap--4 pointer pa1 ph2" data-button-color="blue">
+                                        <svg class="w1 h1 common_elm_wPflhb" height="24px" width="24px" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000">
+                                            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                                            <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                                            <g id="SVGRepo_iconCarrier"> 
+                                                <style type="text/css"> .st0{fill:#000000;} </style> 
+                                                <g> 
+                                                    <path class="st0" d="M378.413,0H208.297h-13.182L185.8,9.314L57.02,138.102l-9.314,9.314v13.176v265.514 c0,47.36,38.528,85.895,85.896,85.895h244.811c47.353,0,85.881-38.535,85.881-85.895V85.896C464.294,38.528,425.766,0,378.413,0z M432.497,426.105c0,29.877-24.214,54.091-54.084,54.091H133.602c-29.884,0-54.098-24.214-54.098-54.091V160.591h83.716 c24.885,0,45.077-20.178,45.077-45.07V31.804h170.116c29.87,0,54.084,24.214,54.084,54.092V426.105z"></path> 
+                                                    <path class="st0" d="M171.947,252.785h-28.529c-5.432,0-8.686,3.533-8.686,8.825v73.754c0,6.388,4.204,10.599,10.041,10.599 c5.711,0,9.914-4.21,9.914-10.599v-22.406c0-0.545,0.279-0.817,0.824-0.817h16.436c20.095,0,32.188-12.226,32.188-29.612 C204.136,264.871,192.182,252.785,171.947,252.785z M170.719,294.888h-15.208c-0.545,0-0.824-0.272-0.824-0.81v-23.23 c0-0.545,0.279-0.816,0.824-0.816h15.208c8.42,0,13.447,5.027,13.447,12.498C184.167,290,179.139,294.888,170.719,294.888z"></path> 
+                                                    <path class="st0" d="M250.191,252.785h-21.868c-5.432,0-8.686,3.533-8.686,8.825v74.843c0,5.3,3.253,8.693,8.686,8.693h21.868 c19.69,0,31.923-6.249,36.81-21.324c1.76-5.3,2.723-11.681,2.723-24.857c0-13.175-0.964-19.557-2.723-24.856 C282.113,259.034,269.881,252.785,250.191,252.785z M267.856,316.896c-2.318,7.331-8.965,10.459-18.21,10.459h-9.23 c-0.545,0-0.824-0.272-0.824-0.816v-55.146c0-0.545,0.279-0.817,0.824-0.817h9.23c9.245,0,15.892,3.128,18.21,10.46 c0.95,3.128,1.62,8.56,1.62,17.93C269.476,308.336,268.805,313.768,267.856,316.896z"></path> 
+                                                    <path class="st0" d="M361.167,252.785h-44.812c-5.432,0-8.7,3.533-8.7,8.825v73.754c0,6.388,4.218,10.599,10.055,10.599 c5.697,0,9.914-4.21,9.914-10.599v-26.351c0-0.538,0.265-0.81,0.81-0.81h26.086c5.837,0,9.23-3.532,9.23-8.56 c0-5.028-3.393-8.553-9.23-8.553h-26.086c-0.545,0-0.81-0.272-0.81-0.817v-19.425c0-0.545,0.265-0.816,0.81-0.816h32.733 c5.572,0,9.245-3.666,9.245-8.553C370.411,256.45,366.738,252.785,361.167,252.785z"></path> 
+                                                </g> 
+                                            </g>
+                                        </svg>
+                                        <span class="font--poppins fw5 ww--break f7">View</span>
                                     </button>
                                 </div>
                             </div>
