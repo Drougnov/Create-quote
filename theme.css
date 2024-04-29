@@ -140,6 +140,11 @@ button[data-button-type="green"] {
     border-bottom: 1px solid var(--dashboard-table-border-colour);
 }
 
+/* table row alternate background */
+.common_elm_UrqFVZ:nth-child(odd) {
+    background: rgba(242, 246, 252, 0.5);
+}
+
 
 /* quotes-status */
 .common_elm_CIuSdn {
