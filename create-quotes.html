@@ -90,6 +90,7 @@
   <body>
       <div class="step-container" data-attribute-steps-handler="1" data-steps='[
       {"name": "createQuote"},
+      {"name": "interior-exterior"},
       {"name": "customerType"},
       {"name": "select-create-customer"},
       {"name": "select-address"},
@@ -106,6 +107,70 @@
               </button>
           </form>
           </div>
+
+          <!-- Interior / Exterior -->
+          <div data-step-name="interior-exterior" style="display: none;" class="pa3">
+            <form onsubmit="event.preventDefault()" class="flex flex-column gap8">
+              <div class="flex flex-column gap16 mt3">
+                <div class="relative db">
+                    <input type="radio" name="interior" value="interior" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
+                    <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                        <div class="w24 h24 flex justify-center items-center relative">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                            <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                          </svg>
+                        </div>
+                        <div class="flex flex-column elm_EThNYL">
+                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Interior</h4>
+                            <h5 class="eml_vhcv poppins f5 fw4 fs-noraml lh-24">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam, eius.</h5>
+                        </div>
+                    </label>
+                </div>
+  
+                <div class="relative db">
+                    <input type="radio" name="exterior" value="exterior" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
+                    <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                      <div class="w24 h24 flex justify-center items-center relative">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                          <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                        </svg>
+                      </div>
+                      <div class="flex flex-column elm_EThNYL">
+                            <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Exterior</h4>
+                            <h5 class="eml_vhcv poppins f5 fw4 fs-noraml lh-24">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, delectus?</h5>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="relative db">
+                  <input type="radio" name="both" value="both" class="w-100 elm_DbnGUE z-5 o-0 relative elm_NnUnNh pointer" data-attribute-next-step-button="1">
+                  <label class="absolute w-100 left-0 top-0 flex gap16 custom-pale-blue-border-big bg-white p24 br24 elm_OVYhdl items-center z-0">
+                    <div class="w24 h24 flex justify-center items-center relative">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_UoQUcF absolute">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#3300FF"/>
+                      </svg>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" class="elm_aoozIp absolute dn">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 1C8.96273 1 6.21136 2.23232 4.22183 4.22182C2.23233 6.21135 1 8.96273 1 12C1 15.0373 2.23231 17.7886 4.22182 19.7782C6.21135 21.7677 8.96273 23 12 23C15.0373 23 17.7886 21.7677 19.7782 19.7782C21.7677 17.7886 23 15.0373 23 12C23 8.96273 21.7677 6.21136 19.7782 4.22183C17.7886 2.23232 15.0373 1 12 1ZM5.63603 5.63604C7.26584 4.00626 9.51447 3 12 3C14.4855 3 16.7342 4.00627 18.3639 5.63604C19.9937 7.26584 21 9.51447 21 12C21 14.4855 19.9937 16.7342 18.3639 18.3639C16.7342 19.9937 14.4855 21 12 21C9.51447 21 7.26584 19.9937 5.63604 18.3639C4.00627 16.7342 3 14.4855 3 12C3 9.51447 4.00625 7.26585 5.63603 5.63604Z" fill="#B9CEE2"/>
+                        <circle cx="12" cy="12" r="6" fill="#3300FF"/>
+                      </svg>
+                    </div>
+                    <div class="flex flex-column elm_EThNYL">
+                          <h4 class="black poppins fs-noraml lh-24  ttc f4 fw5">Both</h4>
+                          <h5 class="eml_vhcv poppins f5 fw4 fs-noraml lh-24">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, numquam?</h5>
+                      </div>
+                  </label>
+              </div>
+              </div>
+            </form>
+            </div>
 
           <!-- Selection -->
           <div data-step-name="customerType" style="display: none;" class="pa3">
