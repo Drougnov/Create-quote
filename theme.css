@@ -134,9 +134,34 @@ button[data-button-type="green"] {
 }
 
 
+/* INPUT STYLES */
+.common_elm_QLpmZC {
+    padding: 0.75rem 0.625rem;
+    margin-top: 0;
+    border-radius: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #dee5ec;
+}
+.common_elm_QLpmZC::placeholder {
+    color: #5f6369;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.5rem;
+    letter-spacing: 0.01rem;
+}
+
+
 /* ICON PATH COLORS */
+/* white */
 .common_elm_wPflhb path {
     fill: #ffffff;
+}
+/* light-blue */
+.common_elm_SKjJTT path {
+    fill: #bfcedd;
 }
 
 
@@ -224,4 +249,11 @@ button[data-button-type="green"] {
 /* finalize icon */
 .common_elm_fvpHdU{
     min-width: 1.35rem;
+}
+
+
+/* PAINT COST POPUP */
+/* popup container */
+.elm_esxxHe .elm_qJBugX{
+    width: 40rem;
 }

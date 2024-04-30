@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Table</title>
+
+    <link rel="stylesheet" id="google-fonts-css" href="https://fonts.googleapis.com/css2?family=Poppins%3Awght%40100%3B200%3B300%3B400%3B500%3B600%3B700%3B800%3B900&amp;display=swap&amp;ver=6.4.3" media="all">
+    
+    <!-- popup-stylesheet & script -->
+    <link rel="stylesheet" href="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/css/dev/popup.css">
+    <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/popup.js"></script>
+
+
+    <link rel="stylesheet" href="https://unpkg.com/tachyons/css/tachyons.min.css">
+    <script src="https://fs.codelinden.com/wp-content/plugins/fansocial/assets/FINAL/js/main.js?ver=1.0" id="main-js"></script>
+    <link rel="stylesheet" href="https://playground.codelinden.com/client-projects/ezyquotes/assets/css/main.css">
+
+    <!-- temporary stylesheets -->
+    <link rel="stylesheet" href="customTachyons.css">
+    <link rel="stylesheet" href="theme.css">
+</head>
+<body>
+    <button class="flex justify-center items-center gap--10 pa2 br--10" data-button-color="blue" onclick="open_popup({'target': '#paint-cost-popup'});">Private Notes</button>
+
+    <!-- paint-cost-popup -->
+    <div class="elm_UoRWYY items-center justify-center fixed dn top-0 left-0 w-100 h-100 z-9999 overflow-auto" id="paint-cost-popup" data-popup-overlay-color="rgba(0,0,0,0.65)" data-popup-position="centered" data-popup-type="elm_esxxHe">
+        <!-- inner wrapper -->
+        <div class="elm_yNwqwJ top-0 w-100 flex items-center justify-center absolute">
+            <!-- container -->
+            <div class="elm_qJBugX inline-flex flex-column gap--24 pad--24 br--30 relative bg-white">
+                <!-- header -->
+                <div class="elm_nZyPEx flex justify-between gap--10">
+                    <h1 class="f3 fw7 lh--24 custom-text-primary-color flex-max mt0 mb0">Paint Costs Required</h1>
+                    <!-- close-icon -->
+                    <div class="elm_UOkrrN pointer">
+                        <svg class="common_elm_SKjJTT w--24 h--24" data-icon="close" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.22185 4.22185C4.61237 3.83132 5.24554 3.83132 5.63606 4.22185L12 10.5858L18.364 4.22185C18.7545 3.83132 19.3877 3.83132 19.7782 4.22185C20.1687 4.61237 20.1687 5.24554 19.7782 5.63606L13.4142 12L19.7782 18.364C20.1687 18.7545 20.1687 19.3877 19.7782 19.7782C19.3877 20.1687 18.7545 20.1687 18.364 19.7782L12 13.4142L5.63606 19.7782C5.24554 20.1687 4.61237 20.1687 4.22185 19.7782C3.83132 19.3877 3.83132 18.7545 4.22185 18.364L10.5858 12L4.22185 5.63606C3.83132 5.24554 3.83132 4.61237 4.22185 4.22185Z" fill="#303437"></path>
+                        </svg>
+                    </div>
+                </div>
+    
+                <!-- contents -->
+                <div class="elm_wdBhkC flex flex-column gap--24">
+                    <p>Please finalize all paint costs.</p>
+                    <!-- table-container -->
+                    <div class="flex flex-column flex--max pb3">
+                        <!-- table-header -->
+                        <div class="flex gap--10 pt2 pb2 pad--left--24 pad--right--24 custom-table-border-bottom-pale-blue">
+                            <div class="flex--max f6 lh--24 dark-gray o-50">Paint</div>
+                            <div class="flex--max f6 lh--24 dark-gray o-50">Required</div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Row -->
+                            <div class="f6 fw5 lh-copy custom-text-primary-color truncate-text flex--max">10L</div>
+                            <!-- Input -->
+                            <div class="f6 fw5 lh-copy custom-text-primary-color truncate-text flex--max">
+                                <input type="text" placeholder="Cost" class="common_elm_QLpmZC w-100">
+                            </div>
+                        </div>
+
+                        <!-- table-row -->
+                        <div class="flex items-center gap--10 pt3 pb3 pad--left--24 pad--right--24">
+                            <!-- Row -->
+                            <div class="f6 fw5 lh-copy custom-text-primary-color truncate-text flex--max">15L</div>
+                            <!-- Input -->
+                            <div class="f6 fw5 lh-copy custom-text-primary-color truncate-text flex--max">
+                                <input type="text" placeholder="Cost" class="common_elm_QLpmZC w-100">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- button-container -->
+                    <div class="flex items-center justify-end gap--8">
+                        <button class="flex justify-center items-center gap--10 pa2 pad--left--24 pad--right--24 br--10" data-button-color="blue">
+                            <span class="f5 fw5 lh--24 white">View Paint Cost Sumary</span>
+                        </button>
+                        <button class="flex justify-center items-center gap--10 pa2 pad--left--24 pad--right--24 br--10" data-button-color="blue">
+                            <span class="f5 fw5 lh--24 white">Proceed to Final Quote</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,8 +1,10 @@
 /* Border Radius */
 .br--10 { border-radius: 0.625rem;}
 .br--24 { border-radius: 1.5rem;}
+.br--30 { border-radius: 1.875rem; }
 
 /* Padding */
+.pad--24 { padding: 1.5rem; }
 .pad--top--24 { padding-top: 1.5rem; }
 .pad--bottom--24 { padding-bottom: 1.5rem; }
 .pad--left--24 { padding-left: 1.5rem; }
@@ -13,15 +15,18 @@
 .gap--8 { gap: 0.5rem; }
 .gap--10 { gap: 0.625rem; }
 .gap--16 { gap: 1rem; }
+.gap--24 { gap: 1.5rem; }
 .gap--32 { gap: 2rem; }
 
 /* Line Height */
 .lh--24 { line-height: 1.5rem;}
 
 /* Width */
+.w--24 { width: 1.5rem; }
 .w--max--content { width: max-content;}
 
 /* Height */
+.h--24 { height: 1.5rem; }
 .h--36 { height: 2.25rem;}
 
 /* Transition */
@@ -34,3 +39,6 @@
 
 /* Word Wrap */
 .ww--break {word-wrap: break-word;}
+
+/* Flex */
+.flex--max{ flex: 1 0 0;}
