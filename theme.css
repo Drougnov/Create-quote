@@ -13,10 +13,11 @@
     --default-rendered-table--background-colour: rgba(242, 246, 252, 0.50);
 
     /* Quote-Statuses Background Colours */
-    --status-pending-background-colour: #DEE5EC;
-    --status-completed-background-colour: #23D997;
-    --status-approved-background-colour: #FCE40D;
-    --status-progress-background-colour: #6C69FF;
+    --status-draft-background-colour: #DEE5EC;
+    --status-pending-background-colour: #FFB301;
+    --status-amend-background-colour: #FCE40D;
+    --status-finalized-background-colour: #23D997;
+    --status-completed-background-colour: #6C69FF;
     --status-cancelled-background-colour: #F24822;
 }
 
@@ -176,7 +177,7 @@ button[data-button-type="green"] {
 
 /* table row alternate background */
 .common_elm_UrqFVZ:nth-child(odd) {
-    background: rgba(242, 246, 252, 0.5);
+    background-color: var(--default-rendered-table--background-colour);
 }
 
 
@@ -187,24 +188,29 @@ button[data-button-type="green"] {
     border-radius: 0.4375rem;
 }
 
+/* draft-quotes-status-background-color */
+.status-bg-color-draft{
+    background-color: var(--status-draft-background-colour);
+}
+
 /* pending-quotes-status-background-color */
 .status-bg-color-pending{
     background-color: var(--status-pending-background-colour);
 }
 
+/* amend-quotes-status-background-color */
+.status-bg-color-amend{
+    background-color: var(--status-amend-background-colour);
+}
+
+/* finalized-quotes-status-background-color */
+.status-bg-color-finalized{
+    background-color: var(--status-finalized-background-colour);
+}
+
 /* completed-quotes-status-background-color */
 .status-bg-color-completed{
     background-color: var(--status-completed-background-colour);
-}
-
-/* approved-quotes-status-background-color */
-.status-bg-color-approved{
-    background-color: var(--status-approved-background-colour);
-}
-
-/* progress-quotes-status-background-color */
-.status-bg-color-progress{
-    background-color: var(--status-progress-background-colour);
 }
 
 /* cancelled-quotes-status-background-color */
@@ -219,7 +225,17 @@ button[data-button-type="green"] {
 /* quotes-table main-container */
 .custom_elm_JrWqER {
     width: 64.875rem;
-    height: 50.125rem;
+}
+
+/* Reset styles for status select-input */
+select.elm_uJLtCk {
+    -webkit-appearance: menulist;
+    -moz-appearance: menulist;
+    appearance: menulist;
+}
+/* Reset styles for status select-input arrow */
+select.elm_uJLtCk::-ms-expand {
+    display: block;
 }
 
 /* quote-column */
@@ -231,12 +247,12 @@ button[data-button-type="green"] {
 
 /* Customer Details column */
 .common_elm_gxlsKW{
-    width: 19%;
+    width: 16%;
 }
 
 /* Status column */
 .common_elm_mAbLiq{
-    width: 9%;
+    width: 12%;
 }
 
 /* Date Created column */

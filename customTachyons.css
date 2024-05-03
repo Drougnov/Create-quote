@@ -27,7 +27,7 @@
 
 /* Height */
 .h--24 { height: 1.5rem; }
-.h--36 { height: 2.25rem;}
+.h--36 { height: 2.25rem; }
 
 /* Transition */
 .transition--all {transition-property: all;}
